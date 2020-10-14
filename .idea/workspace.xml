@@ -58,7 +58,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RunManager">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -87,7 +87,7 @@
       <workItem from="1602703746538" duration="1753000" />
       <workItem from="1602705761106" duration="1751000" />
       <workItem from="1602707627336" duration="1828000" />
-      <workItem from="1602709602264" duration="1030000" />
+      <workItem from="1602709602264" duration="1350000" />
     </task>
     <servers />
   </component>
@@ -147,9 +147,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602708682059" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1602708680468">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1602710953887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602708680468" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602710953887" />
   </component>
 </project>
