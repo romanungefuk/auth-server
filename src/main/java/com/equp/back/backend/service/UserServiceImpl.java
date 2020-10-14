@@ -21,12 +21,12 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void create(String name, String email, String password, User user) {
+        USER_REPOSITORY_MAP.put(email, user);
         final int userId = USER_ID_HOLDER.incrementAndGet();
         user.setId(userId);
         user.setEmail(email);
         user.setName(name);
         user.setPassword(password);
-        USER_REPOSITORY_MAP.put(email, user);
         user.setExperience(new Experience(userId));
         System.out.printf("created user: "+name+"\n");
     }
@@ -38,16 +38,20 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User read(String userEmail, String password) {
+        System.out.println("стартовал поиск "+USER_REPOSITORY_MAP.get(userEmail));
         try {
-            if (USER_REPOSITORY_MAP.get(userEmail).equals(password)){
+            if (USER_REPOSITORY_MAP.get(userEmail).getPassword().equals(password)){
+                System.out.println("пользователь нашелся");
                 return USER_REPOSITORY_MAP.get(userEmail);
             }
-        }catch (UserNotFound e){
+        }catch (NullPointerException e){
             System.out.println(e);
         }
-        return null;
 
-    }
+            return null;
+
+        }
+
 
     @Override
     public boolean update(User user, String userEmail, String newPassword) {

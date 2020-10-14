@@ -22,7 +22,8 @@ public class UserController {
     }
 
     @PostMapping(value = "/create")
-    public ResponseEntity<?> create(@RequestParam (name = "username")String username, @RequestParam (name = "email")String email, @RequestParam (name = "password")String password) {
+    public ResponseEntity<?> create(@RequestParam (name = "username")String username, @RequestParam (name = "email")String email,
+                                    @RequestParam (name = "password")String password) {
 
         List<User> users = userService.readAll();
         boolean b = false;
@@ -38,4 +39,18 @@ public class UserController {
         return new ResponseEntity<User>(user, HttpStatus.CREATED);
 
     }
+
+    @GetMapping(value = "/read")
+    public ResponseEntity<?> read(@RequestParam (name = "email")String email,
+                                    @RequestParam (name = "password")String password){
+
+        User user = userService.read(email, password);
+        if (user == null) {
+            return new ResponseEntity<String>("User not found", HttpStatus.FOUND);
+        }
+        return new ResponseEntity<User>(user, HttpStatus.FOUND);
+
+    }
+
+
 }
