@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff0e28ea-3ba1-4f17-81e1-d83b93f88c8e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/security/jwt/JwtUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/security/jwt/JwtUserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/model/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/model/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/security/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/security/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/backendequp/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase/db.changelog-1.0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/db.changelog-1.0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/db.changelog-master.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\Pavel\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ip1l40K16hS1Z29WFiPEAV3m3X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql&#10;mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/jwtappdemo-master" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="BackendequpEQupApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backendequp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.equp.backendequp.BackendequpEQupApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff0e28ea-3ba1-4f17-81e1-d83b93f88c8e" name="Default Changelist" comment="" />
+      <created>1602589869987</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602589869987</updated>
+      <workItem from="1602589871096" duration="4230000" />
+      <workItem from="1602594131382" duration="10650000" />
+      <workItem from="1602613870657" duration="4352000" />
+      <workItem from="1602618893692" duration="18000" />
+      <workItem from="1602619022472" duration="11000" />
+      <workItem from="1602619112628" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1602617953979">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="859" y="411" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1602617953979" />
+    <state x="811" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602600546367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="811" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602600546367" />
+    <state x="689" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602590909917">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602590909917" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1602618199142">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602618199142" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602618693449">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602618693449" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602618693462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602618693462" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602618693461">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602618693461" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602618693461">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602618693461" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602618693461">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602618693461" />
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1602618693462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602618693462" />
+    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1602618693462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602618693462" />
+    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1602618693462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602618693462" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1602618693462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602618693462" />
+    <state width="211" height="457" key="HiddenNamespacesPopup" timestamp="1602601567953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="211" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1602601567953" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1602603919839">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602603919839" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1602594090821">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602594090821" />
+    <state x="826" y="365" width="316" height="309" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602619123157">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="826" y="365" width="316" height="309" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1602619123157" />
+    <state x="859" y="397" key="com.intellij.database.actions.DdlActions$ModifyObject$1" timestamp="1602601562046">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="859" y="397" key="com.intellij.database.actions.DdlActions$ModifyObject$1/0.0.1920.1040@0.0.1920.1040" timestamp="1602601562046" />
+    <state x="818" y="251" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1602601512169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="818" y="251" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602601512169" />
+  </component>
+</project>
