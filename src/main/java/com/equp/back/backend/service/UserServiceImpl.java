@@ -75,5 +75,10 @@ public class UserServiceImpl implements UserService{
         return USER_REPOSITORY_MAP.remove(userEmail) != null;
     }
 
+    @Override
+    public boolean delete(User user)
+    {
+        return USER_REPOSITORY_MAP.remove(user.getEmail()) != null;
+    }
 
 }

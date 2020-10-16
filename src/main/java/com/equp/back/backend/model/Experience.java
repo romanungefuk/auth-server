@@ -1,6 +1,9 @@
 package com.equp.back.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Experience {
+    @JsonIgnore
     private int userId;
     private double allExperience;
     private double mindfulness;
