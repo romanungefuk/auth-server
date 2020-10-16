@@ -76,9 +76,7 @@ public class UserController {
         responseObject.put("status",302);
         responseObject.put("message","Пользователь найден");
         responseObject.put("id", user.getId());
-        responseObject.put("name", user.getName());
-        responseObject.put("email", user.getEmail());
-        responseObject.put("experience", user.getExperience());
+    
         log.info(responseObject.toString());
         return new ResponseEntity<>(responseObject.toMap(), HttpStatus.FOUND);
 
@@ -94,9 +92,7 @@ public class UserController {
             responseObject.put("status",404);
             responseObject.put("message","Пользователь с такими email или паролем не найден");
             responseObject.put("id", -1);
-            responseObject.put("name", "");
-            responseObject.put("email", "");
-            responseObject.put("experience", new Experience(-1));
+
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
         }
@@ -106,9 +102,7 @@ public class UserController {
             responseObject.put("status",202);
             responseObject.put("message","Пользователь удален");
             responseObject.put("id", -1);
-            responseObject.put("name", "");
-            responseObject.put("email", "");
-            responseObject.put("experience", new Experience(-1));
+
             log.info(responseObject.toString());
         }
         return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
@@ -124,9 +118,7 @@ public class UserController {
             responseObject.put("status", 404);
             responseObject.put("message","Пользователь с такими email или паролем не найден");
             responseObject.put("id", -1);
-            responseObject.put("name", "");
-            responseObject.put("email", "");
-            responseObject.put("experience", new Experience(-1));
+
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
         }
