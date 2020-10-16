@@ -81,4 +81,9 @@ public class UserServiceImpl implements UserService{
         return USER_REPOSITORY_MAP.remove(user.getEmail()) != null;
     }
 
+    public User findByEmail(String email){
+
+        return USER_REPOSITORY_MAP.get(email);
+    }
+
 }

@@ -11,6 +11,8 @@ public interface UserService {
 
     User read (String email, String password);
 
+    User findByEmail(String email);
+
     boolean update(User user, String userEmail, String newPassword);
 
     boolean delete(String userEmail, String password);
