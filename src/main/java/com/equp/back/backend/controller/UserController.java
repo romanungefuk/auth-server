@@ -28,7 +28,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping(value = "/api/v1/users")
+    @PostMapping(value = "/api/v1/signup")
     public ResponseEntity<?> create(@RequestParam (name = "username")String username, @RequestParam (name = "email")String email,
                                     @RequestParam (name = "password")String password) {
 
@@ -55,7 +55,7 @@ public class UserController {
 
     }
 
-    @GetMapping(value = "/api/v1/users")
+    @GetMapping(value = "/api/v1/auth")
     public ResponseEntity<?> read(@RequestParam (name = "email")String email,
                                     @RequestParam (name = "password")String password){
 
@@ -82,7 +82,7 @@ public class UserController {
 
     }
 
-    @PostMapping(value = "/api/v1/users/delete")
+    @PostMapping(value = "/api/v1/delete")
     public ResponseEntity<?> delete(@RequestParam (name = "email")String email,
                                   @RequestParam (name = "password")String password){
         JSONObject responseObject = new JSONObject();
