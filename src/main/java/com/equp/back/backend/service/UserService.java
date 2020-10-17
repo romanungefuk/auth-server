@@ -11,7 +11,7 @@ public interface UserService {
 
     User findById(Long id);
 
-    boolean update(User user, Long id);
+    boolean update(User user, String password);
 
     boolean delete(Long id);
 

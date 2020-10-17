@@ -23,9 +23,6 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
 
-    private static final AtomicLong USER_ID_HOLDER = new AtomicLong();
-
-
     @Override
     public void create(User user) {
         userRepository.save(user);
@@ -43,9 +40,9 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public boolean update(User user, Long id) {
-        if (userRepository.existsById(id)) {
-            user.setId(id);
+    public boolean update(User user, String newPassword) {
+        if (userRepository.existsById(user.getId())) {
+            user.setPassword(newPassword);
             userRepository.save(user);
             return true;
         }
