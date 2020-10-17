@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bb04226-bd9e-4da2-ae01-4d3732227e87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/ExperienceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/ExperienceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Experience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/ExperienceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/ExperienceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Experience.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Experience.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/ExperienceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/ExperienceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/UserServiceImpl.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="schema_equp/PostgreSQL-7801/05127448-3fb1-4349-babf-629c646325ee:SCHEMA" value="Violet" />
+    </colors>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\Pavel\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1isJAc5p3wQQo4HNPdx6svrrov6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="EQup_back" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.equp.back.backend.BackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bb04226-bd9e-4da2-ae01-4d3732227e87" name="Default Changelist" comment="" />
+      <created>1602690223757</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602690223757</updated>
+      <workItem from="1602690227190" duration="1638000" />
+      <workItem from="1602692347828" duration="2059000" />
+      <workItem from="1602695562830" duration="1798000" />
+      <workItem from="1602697376725" duration="1852000" />
+      <workItem from="1602699245533" duration="1793000" />
+      <workItem from="1602703746538" duration="1753000" />
+      <workItem from="1602705761106" duration="1751000" />
+      <workItem from="1602707627336" duration="1828000" />
+      <workItem from="1602709602264" duration="1991000" />
+      <workItem from="1602712632895" duration="1796000" />
+      <workItem from="1602714444868" duration="978000" />
+      <workItem from="1602848158993" duration="46115000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1602948858425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="859" y="411" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1602948858425" />
+    <state x="586" y="198" key="#Inspections" timestamp="1602953372289">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1602953372289" />
+    <state x="349" y="361" key="#SQL_Dialects" timestamp="1602940000641">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="349" y="361" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1602940000641" />
+    <state x="536" y="165" key="#SSH_Configurations" timestamp="1602939424238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="536" y="165" key="#SSH_Configurations/0.0.1920.1040@0.0.1920.1040" timestamp="1602939424238" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602939707876">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602939707876" />
+    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602943985706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602943985706" />
+    <state x="765" y="204" width="390" height="712" key="#com.intellij.ide.util.MemberChooser" timestamp="1602962884591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" width="390" height="712" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602962884591" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602939419673">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602939419673" />
+    <state width="1877" height="241" key="GridCell.Tab.0.bottom" timestamp="1602966809836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="241" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602966809836" />
+    <state width="1877" height="241" key="GridCell.Tab.0.center" timestamp="1602966809836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="241" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602966809836" />
+    <state width="1877" height="241" key="GridCell.Tab.0.left" timestamp="1602966809835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="241" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602966809835" />
+    <state width="1877" height="241" key="GridCell.Tab.0.right" timestamp="1602966809836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="241" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602966809836" />
+    <state width="1877" height="241" key="GridCell.Tab.1.bottom" timestamp="1602966809836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="241" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602966809836" />
+    <state width="1877" height="241" key="GridCell.Tab.1.center" timestamp="1602966809836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="241" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602966809836" />
+    <state width="1877" height="241" key="GridCell.Tab.1.left" timestamp="1602966809836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="241" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602966809836" />
+    <state width="1877" height="241" key="GridCell.Tab.1.right" timestamp="1602966809836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="241" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602966809836" />
+    <state width="262" height="471" key="HiddenNamespacesPopup" timestamp="1602942949314">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="262" height="471" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1602942949314" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1602850310778">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602850310778" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1602710971590">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602710971590" />
+    <state x="858" y="380" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1602939673818">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="858" y="380" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1920.1040@0.0.1920.1040" timestamp="1602939673818" />
+    <state x="830" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602944901118">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="830" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1602944901118" />
+    <state x="803" y="293" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1602944929611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="293" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602944929611" />
+    <state x="736" y="278" key="refactoring.ChangeSignatureDialog" timestamp="1602966199447">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="736" y="278" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602966199447" />
+  </component>
+</project>

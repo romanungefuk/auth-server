@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.equp.back.backend.BackendApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.709 s - in com.equp.back.backend.BackendApplicationTests
