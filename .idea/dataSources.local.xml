@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL-7923@85.192.34.102" uuid="73810a53-bac0-4ced-ae82-bf18124bab1b">
-      <database-info product="MySQL" version="5.6.49" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.6.49" exact-driver-version="8.0">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
+    <data-source name="postgre4equp" uuid="05127448-3fb1-4349-babf-629c646325ee">
+      <database-info product="PostgreSQL" version="12.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="12.4" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>userequp</user-name>
+      <user-name>equp</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

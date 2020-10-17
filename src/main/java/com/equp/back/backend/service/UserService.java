@@ -5,18 +5,18 @@ import com.equp.back.backend.model.User;
 import java.util.List;
 
 public interface UserService {
-    public void create(String name, String email, String password, User user);
+    void create(User user);
 
     List<User> readAll();
 
-    User read (String email, String password);
+    User findById(Long id);
+
+    boolean update(User user, Long id);
+
+    boolean delete(Long id);
 
     User findByEmail(String email);
 
-    boolean update(User user, String userEmail, String newPassword);
 
-    boolean delete(String userEmail, String password);
-
-    boolean delete(User user);
 
 }

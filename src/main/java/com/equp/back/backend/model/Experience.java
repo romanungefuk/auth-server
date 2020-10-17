@@ -4,14 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Experience {
     @JsonIgnore
-    private int userId;
+    private Long userId;
     private double allExperience;
     private double mindfulness;
     private double attitudes;
     private double selfRegulation;
     private double empathy;
 
-    public Experience(int userId) {
+    public Experience(Long userId) {
         this.userId = userId;
         this.allExperience = 0.0;
         this.mindfulness = 0.0;
@@ -20,11 +20,11 @@ public class Experience {
         this.empathy = 0.0;
     }
 
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

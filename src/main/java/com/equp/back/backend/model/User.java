@@ -1,24 +1,49 @@
 package com.equp.back.backend.model;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "users")
 public class User {
-    private Integer id;
+
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
-    private Experience experience;
 
-   // private Mood mood;
+    public User(String username, String email, String password) {
+        this.name = username;
+        this.email = email;
+        this.password = password;
+        new Experience(this.id);
+    }
 
-    public Integer getId() {
+    public User(Long id, String name, String email, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
+
+    public User() {
+
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -44,21 +69,10 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+        System.out.printf("у пользователя %S, пароль должен был смениться на %S \n",this.name, this.password);
+
     }
 
-    public Experience getExperience() {
-        return experience;
-    }
 
-    public void setExperience(Experience experience) {
-        this.experience = experience;
-    }
 
-//    public Mood getMood() {
-//        return mood;
-//    }
-//
-//    public void setMood(Mood mood) {
-//        this.mood = mood;
-//    }
 }
