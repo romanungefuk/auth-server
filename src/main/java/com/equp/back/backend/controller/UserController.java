@@ -36,7 +36,7 @@ public class UserController {
         for (User us: users) {
             if (us.getEmail().equals(email)) {
                 responseObject.put("status", 412);
-                responseObject.put("message", "Пользователь с email: " + email + " создан");
+                responseObject.put("message", "Пользователь с email: " + email + " уже существует");
                 responseObject.put("id", -1);
                 System.out.printf(responseObject.toString());
                 log.info(responseObject.toString());
@@ -47,7 +47,7 @@ public class UserController {
         User user = new User();
         userService.create(username, email, password, user);
         responseObject.put("status",201);
-        responseObject.put("message", "the user with email "+email+" created");
+        responseObject.put("message", "пользователь с email "+email+" создан");
         responseObject.put("id",user.getId());
         System.out.printf(responseObject.toString());
         log.info(responseObject.toString());
@@ -76,7 +76,7 @@ public class UserController {
         responseObject.put("status",302);
         responseObject.put("message","Пользователь найден");
         responseObject.put("id", user.getId());
-    
+
         log.info(responseObject.toString());
         return new ResponseEntity<>(responseObject.toMap(), HttpStatus.FOUND);
 
