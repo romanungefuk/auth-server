@@ -2,6 +2,7 @@ package com.equp.back.backend.controller;
 
 import com.equp.back.backend.model.Experience;
 import com.equp.back.backend.model.User;
+import com.equp.back.backend.service.EmailService;
 import com.equp.back.backend.service.ExperienceService;
 import com.equp.back.backend.service.UserService;
 import com.equp.back.backend.service.impl.EmailSendService;
@@ -18,16 +19,15 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final UserService userService;
-    private final EmailSendService emailSendService;
     private final ExperienceService experienceService;
+    private final EmailService emailService;
     JSONObject responce = new JSONObject();
 
     @Autowired
-    public UserController(UserService userService, EmailSendService emailSendService,
-                          ExperienceService experienceService) {
+    public UserController(UserService userService, ExperienceService experienceService, EmailService emailService) {
         this.userService = userService;
-        this.emailSendService = emailSendService;
         this.experienceService = experienceService;
+        this.emailService = emailService;
     }
 
     @PostMapping(value = "/api/v1/signup")
@@ -76,14 +76,18 @@ public class UserController {
             responseObject.put("status",404);
             responseObject.put("message","Пользователь с такими email не найден");
             responseObject.put("id", -1);
-
+            responseObject.put("name", "null");
+            responseObject.put("email", "null");
+            responseObject.put("experience", new Experience());
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
         }else if (user != null && !user.getPassword().equals(password)){
             responseObject.put("status",401);
             responseObject.put("message","Не верный пароль");
             responseObject.put("id", -1);
-
+            responseObject.put("name", user.getName());
+            responseObject.put("email", user.getEmail());
+            responseObject.put("experience", experienceService.findByUserId(user.getId()));
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.UNAUTHORIZED);
         }else {
@@ -116,7 +120,7 @@ public class UserController {
             responseObject.put("status",202);
             responseObject.put("message","На email: "+email+" отправлена информация о изменении пароля");
             responseObject.put("id", -1L);
-            emailSendService.sendMessage(email);
+            emailService.sendMessage(email);
 
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
         }
