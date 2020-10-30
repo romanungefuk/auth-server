@@ -30,7 +30,7 @@ public class ChangePasswordController {
     }
 
 
-    @GetMapping("/api/v1/password_change")
+    @GetMapping("/password_change")
     public String changePassword(Model model, @RequestParam(value = "email", required = false) String email,
                                  @RequestParam(value = "name", required = false) String name,
                                  @RequestParam(value = "id", required = false) Long id){
@@ -41,7 +41,7 @@ public class ChangePasswordController {
         model.addAttribute("message","");
         return "change_password_page";
     }
-    @PostMapping("/api/v1/password_change")
+    @PostMapping("/password_change")
     public String changePasswordOperation(Model model, @RequestParam(value = "password", required = false) String password,
                                           @RequestParam(value = "password_repeat", required = false) String passwordRepeat,
                                           @RequestParam(value = "id", required = false) Long id,
