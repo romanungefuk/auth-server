@@ -1,17 +1,22 @@
 package com.equp.back.backend.controller;
 
+import com.equp.back.backend.config.MyConstants;
 import com.equp.back.backend.model.Experience;
 import com.equp.back.backend.model.User;
-import com.equp.back.backend.service.EmailService;
 import com.equp.back.backend.service.ExperienceService;
 import com.equp.back.backend.service.UserService;
-import com.equp.back.backend.service.impl.EmailSendService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.web.bind.annotation.*;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 
 
 @RestController
@@ -20,14 +25,14 @@ public class UserController {
 
     private final UserService userService;
     private final ExperienceService experienceService;
-    private final EmailService emailService;
-    JSONObject responce = new JSONObject();
+    private JavaMailSender emailSender;
+
 
     @Autowired
-    public UserController(UserService userService, ExperienceService experienceService, EmailService emailService) {
+    public UserController(UserService userService, ExperienceService experienceService, JavaMailSender emailSender) {
         this.userService = userService;
         this.experienceService = experienceService;
-        this.emailService = emailService;
+        this.emailSender = emailSender;
     }
 
     @PostMapping(value = "/api/v1/signup")
@@ -44,7 +49,7 @@ public class UserController {
                 responseObject.put("status", 412);
                 responseObject.put("message", "Пользователь с email: " + email + " уже существует");
                 responseObject.put("id", -1);
-                System.out.printf(responseObject.toString());
+                System.out.print(responseObject.toString());
                 log.info(responseObject.toString());
                 return new ResponseEntity<>(responseObject.toMap(), HttpStatus.PRECONDITION_FAILED);
             }
@@ -55,7 +60,7 @@ public class UserController {
         responseObject.put("status",201);
         responseObject.put("message", "пользователь с email "+email+" создан");
         responseObject.put("id",user.getId());
-        System.out.printf(responseObject.toString());
+        System.out.print(responseObject.toString());
         Experience ttt = new Experience(user.getId());
         log.info("опыт создан");
         experienceService.create(ttt);
@@ -81,7 +86,7 @@ public class UserController {
             responseObject.put("experience", new Experience());
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
-        }else if (user != null && !user.getPassword().equals(password)){
+        }else if (!user.getPassword().equals(password)){
             responseObject.put("status",401);
             responseObject.put("message","Не верный пароль");
             responseObject.put("id", -1);
@@ -104,7 +109,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/api/v1/update")
-    public ResponseEntity<?> delete(@RequestParam (name = "email")String email){
+    public ResponseEntity<?> delete(@RequestParam (name = "email")String email) throws MessagingException {
         JSONObject responseObject = new JSONObject();
 
         User user = userService.findByEmail(email);
@@ -120,10 +125,31 @@ public class UserController {
             responseObject.put("status",202);
             responseObject.put("message","На email: "+email+" отправлена информация о изменении пароля");
             responseObject.put("id", -1L);
-            emailService.sendMessage(email);
 
-            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
+
+            MimeMessage message = emailSender.createMimeMessage();
+            boolean multipart = true;
+            MimeMessageHelper helper = new MimeMessageHelper(message, multipart, "utf-8");
+            String htmlMsg = "<!DOCTYPE html>"+
+                    "<html lang=\"ru\">"+
+                    "<head>"+
+                    "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />"+
+                    "<title>Title</title>"+
+                    "</head>"+
+                    "<body>"+
+                    "<h3>To change your password, follow the link:</h3>"+
+                    "<a href=\"http://yandex.ru?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
+                    "</body>"+
+                    "</html>";
+
+            message.setContent(htmlMsg, "text/html");
+            helper.setTo(user.getEmail());
+            helper.setSubject("Change your EQup password");
+            this.emailSender.send(message);
+
+
         }
+        return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
 
     }
 
@@ -138,7 +164,7 @@ public class UserController {
             responseObject.put("id", -1);
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
-        }else if (user != null && !user.getPassword().equals(password)) {
+        }else if (!user.getPassword().equals(password)) {
             responseObject.put("status", 401);
             responseObject.put("message", "Не верный пароль");
             responseObject.put("id", -1);
