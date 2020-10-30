@@ -1,6 +1,5 @@
 package com.equp.back.backend.controller;
 
-import com.equp.back.backend.config.MyConstants;
 import com.equp.back.backend.model.Experience;
 import com.equp.back.backend.model.User;
 import com.equp.back.backend.service.ExperienceService;
@@ -10,7 +9,6 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +23,7 @@ public class UserController {
 
     private final UserService userService;
     private final ExperienceService experienceService;
-    private JavaMailSender emailSender;
+    private final JavaMailSender emailSender;
 
 
     @Autowired
@@ -120,7 +118,6 @@ public class UserController {
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
         }else {
-            userService.update(user,"333");
 
             responseObject.put("status",202);
             responseObject.put("message","На email: "+email+" отправлена информация о изменении пароля");
@@ -138,7 +135,8 @@ public class UserController {
                     "</head>"+
                     "<body>"+
                     "<h3>To change your password, follow the link:</h3>"+
-                    "<a href=\"http://yandex.ru?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
+                    "<a href=\"http://localhost:8080/api/v1/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
+//                    "<a href=\"http://eq-up.ru:8080/api/v1/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
                     "</body>"+
                     "</html>";
 
