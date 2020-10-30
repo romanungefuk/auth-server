@@ -23,20 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb04226-bd9e-4da2-ae01-4d3732227e87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/password_changed_successfully.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EQup_back.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EQup_back.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/SpringMVCDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/SpringMVCDispatcherServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/ChangePasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/ChangePasswordController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/change_password_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/change_password_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/ChangePasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/ChangePasswordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/change_password_page.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +175,7 @@
       <workItem from="1603293524678" duration="2504000" />
       <workItem from="1603905305998" duration="6561000" />
       <workItem from="1603951857040" duration="19859000" />
-      <workItem from="1604043998072" duration="34058000" />
+      <workItem from="1604043998072" duration="34891000" />
     </task>
     <servers />
   </component>

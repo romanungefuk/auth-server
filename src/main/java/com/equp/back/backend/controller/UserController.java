@@ -135,8 +135,8 @@ public class UserController {
                     "</head>"+
                     "<body>"+
                     "<h3>To change your password, follow the link:</h3>"+
-                    "<a href=\"http://localhost:8080/api/v1/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
-//                    "<a href=\"http://eq-up.ru:8080/api/v1/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
+//                    "<a href=\"http://localhost:8080/api/v1/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
+                    "<a href=\"http://eq-up.ru:8080/api/v1/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
                     "</body>"+
                     "</html>";
 
