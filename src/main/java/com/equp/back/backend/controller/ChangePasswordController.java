@@ -64,7 +64,7 @@ public class ChangePasswordController {
                     "<title>Title</title>"+
                     "</head>"+
                     "<body>"+
-                    "<p>Password was changed successfully</p>"+
+                    "<p>Password  was  changed successfully</p>"+
                     "</body>"+
                     "</html>";
 
