@@ -196,7 +196,6 @@ public class UserController {
                 log.info(responseObject.toString());
                 return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
         }else{
-        experience.setAllExperience(allExperience);
         experience.setMindfulness(mindfulness);
         experience.setAttitudes(attitudes);
         experience.setSelfRegulation(selfregulation);

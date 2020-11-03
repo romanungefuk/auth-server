@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.equp.back</groupId>
     <artifactId>backend</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>equp-prod</version>
     <name>backend</name>
     <description>Backend services</description>
 

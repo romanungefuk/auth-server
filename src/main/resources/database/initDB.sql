@@ -9,7 +9,15 @@ CREATE TABLE IF NOT EXISTS users
 CREATE TABLE IF NOT EXISTS experiences
 (
     id    BIGSERIAL PRIMARY KEY ,
-    all_experience  DOUBLE PRECISION NOT NULL ,
+    mindfulness  DOUBLE PRECISION NOT NULL ,
+    attitudes  DOUBLE PRECISION NOT NULL ,
+    selfRegulation  DOUBLE PRECISION NOT NULL ,
+    empathy  DOUBLE PRECISION NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS testresult
+(
+    id    BIGSERIAL PRIMARY KEY ,
     mindfulness  DOUBLE PRECISION NOT NULL ,
     attitudes  DOUBLE PRECISION NOT NULL ,
     selfRegulation  DOUBLE PRECISION NOT NULL ,

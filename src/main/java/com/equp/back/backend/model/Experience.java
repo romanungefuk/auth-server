@@ -17,9 +17,6 @@ public class Experience {
 
     private Long userId;
 
-    @Column(name = "all_experience")
-    private double allExperience;
-
     @Column(name = "mindfulness")
     private double mindfulness;
 
@@ -34,7 +31,6 @@ public class Experience {
 
     public Experience(Long userId) {
         this.userId = userId;
-        this.allExperience = 0.0;
         this.mindfulness = 0.0;
         this.attitudes = 0.0;
         this.selfRegulation = 0.0;
@@ -48,7 +44,6 @@ public class Experience {
     public Experience(Long userId, double allExperience, double mindfulness,
                       double attitudes, double selfRegulation, double empathy) {
         this.userId = userId;
-        this.allExperience = allExperience;
         this.mindfulness = mindfulness;
         this.attitudes = attitudes;
         this.selfRegulation = selfRegulation;
@@ -63,13 +58,6 @@ public class Experience {
         this.userId = userId;
     }
 
-    public double getAllExperience() {
-        return allExperience;
-    }
-
-    public void setAllExperience(double allExperience) {
-        this.allExperience = allExperience;
-    }
 
     public double getMindfulness() {
         return mindfulness;
