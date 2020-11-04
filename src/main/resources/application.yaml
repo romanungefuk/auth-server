@@ -24,6 +24,14 @@ spring:
     schema: classpath*:database/initDB.sql
 #    data: classpath*:database/populateDB.sql
 
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    enabled: true
+    prefix: classpath:resources/templates/
+    suffix: .html
+
 
   jpa:
     database: postgresql

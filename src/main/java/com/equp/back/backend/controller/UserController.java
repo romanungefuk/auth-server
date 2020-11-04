@@ -157,45 +157,46 @@ public class UserController {
             MimeMessage message = emailSender.createMimeMessage();
             boolean multipart = true;
             MimeMessageHelper helper = new MimeMessageHelper(message, multipart, "utf-8");
-//            String htmlMsg = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.=" +
-//                    "w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"+
-//                    "<html style=3D\"width:100%;font-family:arial, 'helvetica neue', helvetica, s=" +
-//                    "ans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0=" +
-//                    ";Margin:0\">"+
-//                    "<head>"+
-//
-//                    "<meta http-equiv=3D\"Content-Security-Policy\" content=3D\"script-src 'non=" +
-//                    "e'; connect-src 'none'; object-src 'none'; form-action 'none';\">" +
-//                    "    <meta charset=3D\"UTF-8\">\n" +
-//                    "    <meta content=3D\"width=3Ddevice-width, initial-scale=3D1\" name=3D\"viewp=" +
-//                    "ort\">" +
-//                    "    <meta name=3D\"x-apple-disable-message-reformatting\">\n" +
-//                    "    <meta http-equiv=3D\"X-UA-Compatible\" content=3D\"IE=3Dedge\">\n" +
-//                    "    <meta content=3D\"telephone=3Dno\" name=3D\"format-detection\">"+
-//
-//                    "<title>Смена пароля от приложения EQup</title>"+
-//                    "</head>"+
-//                    "<body>"+
-//                    "<h3>Для смены пароля перейдите по ссылке: </h3>"+
-//                    "<a href=\"http://localhost:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
-////                    "<a href=\"http://www.eq-up.ru:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
-//                    "</body>"+
-//                    "</html>";
+            String htmlMsg = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.=" +
+                    "w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"+
+                    "<html style=3D\"width:100%;font-family:arial, 'helvetica neue', helvetica, s=" +
+                    "ans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0=" +
+                    ";Margin:0\">"+
+                    "<head>"+
 
-            String htmlMsg = "Здравствуйте, "+ user.getName()+"!\n"+
-                    "Вы получили это письмо потому, что Вы (либо кто-то, выдающий себя за вас) " +
+                    "<meta http-equiv=3D\"Content-Security-Policy\" content=3D\"script-src 'non=" +
+                    "e'; connect-src 'none'; object-src 'none'; form-action 'none';\">" +
+                    "    <meta charset=3D\"UTF-8\">\n" +
+                    "    <meta content=3D\"width=3Ddevice-width, initial-scale=3D1\" name=3D\"viewp=" +
+                    "ort\">" +
+                    "    <meta name=3D\"x-apple-disable-message-reformatting\">\n" +
+                    "    <meta http-equiv=3D\"X-UA-Compatible\" content=3D\"IE=3Dedge\">\n" +
+                    "    <meta content=3D\"telephone=3Dno\" name=3D\"format-detection\">"+
+
+                    "<title>Смена пароля от приложения EQup</title>"+
+                    "</head>"+
+                    "<body>"+
+                    "<h4>Здравствуйте, "+user.getName()+"!\n" +
+                    "Вы получили это письмо потому, что Вы (либо кто-то, выдающий себя за Вас) " +
                     "при попытке входа в учетную запись EQup отправил запрос на изменение пароля. " +
-                    "Если Вы этого не делали, то не обращайте внимания на это письмо, " +
-                    "если же подобные письма будут продолжать приходить, обратитесь в нашу поддерку.\n"+
-                    "Для изменения пароля перейдите поссылке: " +
-                    "http://localhost:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+
-                    "\n\n\n" +
-                    "---------------------\n"+
-                    "C уважением команда EQup";
+                    "</h4>" +
+                    "<h4>Если Вы этого не делали, то не обращайте внимания на это письмо, " +
+                    "если же подобные письма будут продолжать приходить, обратитесь в нашу поддерку." +
+                    "</h4>"+
+//                    "<a href=\"http://localhost:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">Сменить пароль</a>" +
+                    "<a href=\"http://www.eq-up.ru:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
+                    "</br>"+
+                    "</br>"+ "</br>"+
+                    "</br>"+
+                    "<h4>-------------------------</h4>" +
+                    "</br>"+
+                    "<h4>С уважением команда EQup</h4>"+
+                    "</body>"+
+                    "</html>";
+            message.setContent(htmlMsg, "text/html; charset=utf-8");
 
 
 
-//            message.setContent(htmlMsg, "text/html");
             helper.setText(htmlMsg);
             helper.setTo(user.getEmail());
             helper.setSubject("Изменение пароля от EQup");

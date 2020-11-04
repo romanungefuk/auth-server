@@ -29,6 +29,10 @@ public class ChangePasswordController {
         this.emailSender = emailSender;
     }
 
+    @GetMapping("/")
+    public String aboutPageOpen(){
+        return "about";
+    }
 
     @GetMapping("/password_change")
     public String changePassword(Model model, @RequestParam(value = "email", required = false) String email,
