@@ -22,23 +22,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="обновил модель и запрос обновления">
+    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="обновил модель Добавил StartLocation">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/ChangePasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/ChangePasswordController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Experience.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/TestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/TestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/populateDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/populateDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/change_password_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/change_password_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/password_changed_successfully.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/password_changed_successfully.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/backend-equp-prod.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/backend-equp-prod.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/backend-equp-prod.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/backend-equp-prod.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/change_password_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/views/change_password_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/SpringConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/ChangePasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/ChangePasswordController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Experience.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Experience.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Testresult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Testresult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/initDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/populateDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/populateDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.equp.back.backend.BackendApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.equp.back.backend.BackendApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.equp.back.backend.BackendApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.equp.back.backend.BackendApplicationTests.txt" afterDir="false" />
     </list>
@@ -56,13 +60,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="HTML File" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -103,12 +113,13 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Java\EQup\rep2810\src\main\webapp\WEB-INF\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java\EQup\rep2810\src\main\resources" />
       <recent name="D:\Java\EQup\EQup_back\src\main\java\com\equp\back\backend\email" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\EQup\rep2810\src\main\resources\templates" />
+      <recent name="D:\Java\EQup\rep2810\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BackendApplication">
@@ -199,7 +210,7 @@
       <workItem from="1604388280408" duration="9093000" />
       <workItem from="1604484139862" duration="122000" />
       <workItem from="1604484872454" duration="18039000" />
-      <workItem from="1604511837737" duration="1579000" />
+      <workItem from="1604511837737" duration="10956000" />
     </task>
     <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
       <created>1604488797266</created>
@@ -215,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604497752277</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="обновил модель Добавил StartLocation">
+      <created>1604513686465</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604513686465</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +253,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="обновил модель и запрос обновления" />
-    <option name="LAST_COMMIT_MESSAGE" value="обновил модель и запрос обновления" />
+    <MESSAGE value="обновил модель Добавил StartLocation" />
+    <option name="LAST_COMMIT_MESSAGE" value="обновил модель Добавил StartLocation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1602948858425">
@@ -286,38 +305,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602939419673" />
-    <state width="1877" height="345" key="GridCell.Tab.0.bottom" timestamp="1604513590138">
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1604522710998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604513590138" />
-    <state width="1877" height="345" key="GridCell.Tab.0.center" timestamp="1604513590137">
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
+    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1604522710998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604513590137" />
-    <state width="1877" height="345" key="GridCell.Tab.0.left" timestamp="1604513590137">
+    <state width="1877" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
+    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1604522710998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604513590137" />
-    <state width="1877" height="345" key="GridCell.Tab.0.right" timestamp="1604513590137">
+    <state width="1877" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
+    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1604522710998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604513590137" />
-    <state width="1877" height="300" key="GridCell.Tab.1.bottom" timestamp="1604512119301">
+    <state width="1877" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom" timestamp="1604522710999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604512119301" />
-    <state width="1877" height="300" key="GridCell.Tab.1.center" timestamp="1604512119300">
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710999" />
+    <state width="1877" height="286" key="GridCell.Tab.1.center" timestamp="1604522710998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604512119300" />
-    <state width="1877" height="300" key="GridCell.Tab.1.left" timestamp="1604512119300">
+    <state width="1877" height="286" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
+    <state width="1877" height="286" key="GridCell.Tab.1.left" timestamp="1604522710998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604512119300" />
-    <state width="1877" height="300" key="GridCell.Tab.1.right" timestamp="1604512119301">
+    <state width="1877" height="286" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
+    <state width="1877" height="286" key="GridCell.Tab.1.right" timestamp="1604522710999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604512119301" />
+    <state width="1877" height="286" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710999" />
     <state width="1877" height="354" key="GridCell.Tab.2.bottom" timestamp="1604511818894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -346,10 +365,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604503344199" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604497756351">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604513870594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604497756351" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604513870594" />
     <state x="772" y="403" width="376" height="320" key="com.intellij.database.actions.DdlActions$CommentOnObjectAction$1" timestamp="1604420902193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
