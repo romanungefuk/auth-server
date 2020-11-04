@@ -1,7 +1,6 @@
 package com.equp.back.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
@@ -24,30 +23,24 @@ public class Experience {
     private double attitudes;
 
     @Column(name = "selfregulation")
-    private double selfRegulation;
+    private double selfregulation;
 
     @Column(name = "empathy")
     private double empathy;
+
+    @Column(name = "start_location")
+    private double startLocation;
 
     public Experience(Long userId) {
         this.userId = userId;
         this.mindfulness = 0.0;
         this.attitudes = 0.0;
-        this.selfRegulation = 0.0;
+        this.selfregulation = 0.0;
         this.empathy = 0.0;
+        this.startLocation = 0.0;
     }
 
     public Experience() {
-
-    }
-
-    public Experience(Long userId, double allExperience, double mindfulness,
-                      double attitudes, double selfRegulation, double empathy) {
-        this.userId = userId;
-        this.mindfulness = mindfulness;
-        this.attitudes = attitudes;
-        this.selfRegulation = selfRegulation;
-        this.empathy = empathy;
     }
 
     public Long getUserId() {
@@ -57,7 +50,6 @@ public class Experience {
     public void setUserId(Long userId) {
         this.userId = userId;
     }
-
 
     public double getMindfulness() {
         return mindfulness;
@@ -75,12 +67,12 @@ public class Experience {
         this.attitudes = attitudes;
     }
 
-    public double getSelfRegulation() {
-        return selfRegulation;
+    public double getSelfregulation() {
+        return selfregulation;
     }
 
-    public void setSelfRegulation(double selfRegulation) {
-        this.selfRegulation = selfRegulation;
+    public void setSelfregulation(double selfregulation) {
+        this.selfregulation = selfregulation;
     }
 
     public double getEmpathy() {
@@ -89,6 +81,14 @@ public class Experience {
 
     public void setEmpathy(double empathy) {
         this.empathy = empathy;
+    }
+
+    public double getStartLocation() {
+        return startLocation;
+    }
+
+    public void setStartLocation(double startLocation) {
+        this.startLocation = startLocation;
     }
 }
 

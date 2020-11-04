@@ -7,7 +7,6 @@ import com.equp.back.backend.model.User;
 import com.equp.back.backend.service.ExperienceService;
 import com.equp.back.backend.service.TestresultService;
 import com.equp.back.backend.service.UserService;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -158,22 +157,48 @@ public class UserController {
             MimeMessage message = emailSender.createMimeMessage();
             boolean multipart = true;
             MimeMessageHelper helper = new MimeMessageHelper(message, multipart, "utf-8");
-            String htmlMsg = "<!DOCTYPE html>"+
-                    "<html lang=\"ru\">"+
-                    "<head>"+
-                    "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />"+
-                    "<title>Title</title>"+
-                    "</head>"+
-                    "<body>"+
-                    "<h3>To change your password, follow the link:</h3>"+
+//            String htmlMsg = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.=" +
+//                    "w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"+
+//                    "<html style=3D\"width:100%;font-family:arial, 'helvetica neue', helvetica, s=" +
+//                    "ans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0=" +
+//                    ";Margin:0\">"+
+//                    "<head>"+
+//
+//                    "<meta http-equiv=3D\"Content-Security-Policy\" content=3D\"script-src 'non=" +
+//                    "e'; connect-src 'none'; object-src 'none'; form-action 'none';\">" +
+//                    "    <meta charset=3D\"UTF-8\">\n" +
+//                    "    <meta content=3D\"width=3Ddevice-width, initial-scale=3D1\" name=3D\"viewp=" +
+//                    "ort\">" +
+//                    "    <meta name=3D\"x-apple-disable-message-reformatting\">\n" +
+//                    "    <meta http-equiv=3D\"X-UA-Compatible\" content=3D\"IE=3Dedge\">\n" +
+//                    "    <meta content=3D\"telephone=3Dno\" name=3D\"format-detection\">"+
+//
+//                    "<title>Смена пароля от приложения EQup</title>"+
+//                    "</head>"+
+//                    "<body>"+
+//                    "<h3>Для смены пароля перейдите по ссылке: </h3>"+
 //                    "<a href=\"http://localhost:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
-                    "<a href=\"http://www.eq-up.ru:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
-                    "</body>"+
-                    "</html>";
+////                    "<a href=\"http://www.eq-up.ru:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
+//                    "</body>"+
+//                    "</html>";
 
-            message.setContent(htmlMsg, "text/html");
+            String htmlMsg = "Здравствуйте, "+ user.getName()+"!\n"+
+                    "Вы получили это письмо потому, что Вы (либо кто-то, выдающий себя за вас) " +
+                    "при попытке входа в учетную запись EQup отправил запрос на изменение пароля. " +
+                    "Если Вы этого не делали, то не обращайте внимания на это письмо, " +
+                    "если же подобные письма будут продолжать приходить, обратитесь в нашу поддерку.\n"+
+                    "Для изменения пароля перейдите поссылке: " +
+                    "http://localhost:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+
+                    "\n\n\n" +
+                    "---------------------\n"+
+                    "C уважением команда EQup";
+
+
+
+//            message.setContent(htmlMsg, "text/html");
+            helper.setText(htmlMsg);
             helper.setTo(user.getEmail());
-            helper.setSubject("Change your EQup password");
+            helper.setSubject("Изменение пароля от EQup");
             this.emailSender.send(message);
 
 
@@ -189,12 +214,11 @@ public class UserController {
      * @return
      */
     @DeleteMapping(value = "/api/v1/delete-user")
-    public ResponseEntity<?> delete(@RequestParam (value = "id", defaultValue = "-1")Long id,
+    public ResponseEntity<?> deleteUser(@RequestParam (value = "id", defaultValue = "-1")Long id,
                                            @RequestParam (value = "token", defaultValue = "-1") String token){
         JSONObject responseObject = new JSONObject();
 
         User user = userService.findById(id);
-//        System.err.println("user = "+user == null);
         System.err.println("token = "+token.equals(this.token.getToken()));
         if (userService.findById(id)==null || !token.equals(this.token.getToken())){
             responseObject.put("codeResponse", 404);
@@ -220,19 +244,18 @@ public class UserController {
      * @return
      */
     @PostMapping(value = "/api/v1/user-update")
-    public ResponseEntity<?> experienceUpdate(@RequestParam (value = "id", defaultValue = "-1")Long id,
-                                              @RequestParam (value = "token", defaultValue = "-1") String token,
-                                              @RequestParam (value = "experienceMindfulness", defaultValue = "-1")double experienceMindfulness,
-                                              @RequestParam (value = "experienceAttitudes", defaultValue = "-1")double experienceAttitudes,
-                                              @RequestParam (value = "experienceSelfRegulation", defaultValue = "-1")double experienceSelfRegulation,
-                                              @RequestParam (value = "experienceEmpathy", defaultValue = "-1")double experienceEmpathy,
-                                              @RequestParam (value = "testResultMindfulness", defaultValue = "-1")double testResultMindfulness,
-                                              @RequestParam (value = "testResultAttitudes", defaultValue = "-1")double testResultAttitudes,
-                                              @RequestParam (value = "testResultSelfRegulation", defaultValue = "-1")double testResultSelfRegulation,
-                                              @RequestParam (value = "testResultEmpathy", defaultValue = "-1")double testResultEmpathy){
-    {
-
-
+    public ResponseEntity<?> userUpdate(@RequestParam (value = "id", defaultValue = "-1")Long id,
+                                        @RequestParam (value = "token", defaultValue = "-1") String token,
+                                        @RequestParam (value = "experienceStartLocation", defaultValue = "-1")double experienceStartLocation,
+                                        @RequestParam (value = "experienceMindfulness", defaultValue = "-1")double experienceMindfulness,
+                                        @RequestParam (value = "experienceAttitudes", defaultValue = "-1")double experienceAttitudes,
+                                        @RequestParam (value = "experienceSelfRegulation", defaultValue = "-1")double experienceSelfRegulation,
+                                        @RequestParam (value = "experienceEmpathy", defaultValue = "-1")double experienceEmpathy,
+                                        @RequestParam (value = "testResultStartLocation", defaultValue = "-1")double testResultStartLocation,
+                                        @RequestParam (value = "testResultMindfulness", defaultValue = "-1")double testResultMindfulness,
+                                        @RequestParam (value = "testResultAttitudes", defaultValue = "-1")double testResultAttitudes,
+                                        @RequestParam (value = "testResultSelfRegulation", defaultValue = "-1")double testResultSelfRegulation,
+                                        @RequestParam (value = "testResultEmpathy", defaultValue = "-1")double testResultEmpathy){
 
         JSONObject responseObject = new JSONObject();
         Experience experience = experienceService.findByUserId(id);
@@ -251,28 +274,34 @@ public class UserController {
         user.setName(userService.findById(id).getName());
             {
 
+                if (experienceStartLocation > experience.getStartLocation()){
+                    experience.setStartLocation(experienceStartLocation);
+                }
                 if (experienceMindfulness > experience.getMindfulness()){
                     experience.setMindfulness(experienceMindfulness);
                 }
                 if (experienceAttitudes > experience.getAttitudes()){
                     experience.setAttitudes(experienceAttitudes);
                 }
-                if (experienceSelfRegulation > experience.getSelfRegulation()){
-                    experience.setSelfRegulation(experienceSelfRegulation);
+                if (experienceSelfRegulation > experience.getSelfregulation()){
+                    experience.setSelfregulation(experienceSelfRegulation);
                 }
                 if (experienceEmpathy > experience.getEmpathy()){
                     experience.setEmpathy(experienceEmpathy);
                 }
 
 
+                if (testResultStartLocation > experience.getStartLocation()){
+                    testResult.setStartLocation(testResultStartLocation);
+                }
                 if (testResultMindfulness > testResult.getMindfulness()){
                     testResult.setMindfulness(testResultMindfulness);
                 }
                 if (testResultAttitudes > testResult.getAttitudes()){
                     testResult.setAttitudes(testResultAttitudes);
                 }
-                if (testResultSelfRegulation > testResult.getSelfRegulation()){
-                    testResult.setSelfRegulation(testResultSelfRegulation);
+                if (testResultSelfRegulation > testResult.getSelfregulation()){
+                    testResult.setSelfregulation(testResultSelfRegulation);
                 }
                 if (testResultEmpathy > testResult.getEmpathy()){
                     testResult.setEmpathy(testResultEmpathy);
@@ -293,7 +322,6 @@ public class UserController {
                 log.info(responseObject.toString());
             }
         return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
-        }
 
     }
 }

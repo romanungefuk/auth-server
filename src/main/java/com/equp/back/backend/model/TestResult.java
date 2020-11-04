@@ -2,7 +2,6 @@ package com.equp.back.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,15 +9,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "testresult")
+@Table(name = "test_result")
 @Slf4j
 public class TestResult {
 
     @JsonIgnore
     @Id
     @Column(name = "id")
-
     private Long userId;
+
+    @Column(name = "start_location")
+    private double startLocation;
 
     @Column(name = "mindfulness")
     private double mindfulness;
@@ -27,17 +28,18 @@ public class TestResult {
     private double attitudes;
 
     @Column(name = "selfregulation")
-    private double selfRegulation;
+    private double selfregulation;
 
     @Column(name = "empathy")
     private double empathy;
 
     public TestResult(Long userId) {
         this.userId = userId;
-        this.mindfulness = mindfulness;
-        this.attitudes = attitudes;
-        this.selfRegulation = selfRegulation;
-        this.empathy = empathy;
+        this.mindfulness = 0.0;
+        this.attitudes = 0.0;
+        this.selfregulation = 0.0;
+        this.empathy = 0.0;
+        this.startLocation = 0.0;
     }
 
     public TestResult() {
@@ -49,6 +51,14 @@ public class TestResult {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public double getStartLocation() {
+        return startLocation;
+    }
+
+    public void setStartLocation(double startLocation) {
+        this.startLocation = startLocation;
     }
 
     public double getMindfulness() {
@@ -67,12 +77,12 @@ public class TestResult {
         this.attitudes = attitudes;
     }
 
-    public double getSelfRegulation() {
-        return selfRegulation;
+    public double getSelfregulation() {
+        return selfregulation;
     }
 
-    public void setSelfRegulation(double selfRegulation) {
-        this.selfRegulation = selfRegulation;
+    public void setSelfregulation(double selfRegulation) {
+        this.selfregulation = selfRegulation;
     }
 
     public double getEmpathy() {
@@ -81,9 +91,5 @@ public class TestResult {
 
     public void setEmpathy(double empathy) {
         this.empathy = empathy;
-    }
-
-    public static Logger getLog() {
-        return log;
     }
 }
