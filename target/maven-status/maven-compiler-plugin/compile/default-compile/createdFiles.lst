@@ -2,7 +2,6 @@ com\equp\back\backend\model\User.class
 com\equp\back\backend\config\MyConstants.class
 com\equp\back\backend\BackendApplication.class
 com\equp\back\backend\controller\ChangePasswordController.class
-com\equp\back\backend\model\Testresult.class
 com\equp\back\backend\repository\UserRepository.class
 com\equp\back\backend\service\impl\UserServiceImpl.class
 com\equp\back\backend\model\Experience.class
@@ -15,5 +14,6 @@ com\equp\back\backend\controller\UserController.class
 com\equp\back\backend\model\Mood.class
 com\equp\back\backend\config\MailConfig.class
 com\equp\back\backend\exception\UserNotFound.class
+com\equp\back\backend\model\TestResult.class
 com\equp\back\backend\model\Status.class
 com\equp\back\backend\config\SpringConfig.class
