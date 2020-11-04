@@ -22,28 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/JWT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/TestresultRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/TestresultService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/TestresultServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="обновил модель и запрос обновления">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Testresult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/TestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/populateDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/populateDB.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/backend-equp-prod.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/backend-equp-prod.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/backend-equp-prod.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/backend-equp-prod.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/ChangePasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/ChangePasswordController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Testresult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Testresult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/populateDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/populateDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.equp.back.backend.BackendApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.equp.back.backend.BackendApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.equp.back.backend.BackendApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.equp.back.backend.BackendApplicationTests.txt" afterDir="false" />
     </list>
@@ -201,8 +185,16 @@
       <workItem from="1604248691821" duration="4144000" />
       <workItem from="1604388280408" duration="9093000" />
       <workItem from="1604484139862" duration="122000" />
-      <workItem from="1604484872454" duration="3812000" />
+      <workItem from="1604484872454" duration="6155000" />
     </task>
+    <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
+      <created>1604488797266</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604488797266</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +211,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="обновил модель и запрос обновления" />
+    <option name="LAST_COMMIT_MESSAGE" value="обновил модель и запрос обновления" />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1602948858425">
@@ -257,6 +253,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="389" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1604418459215" />
+    <state x="257" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604497614475">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="257" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604497614475" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604043858194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -265,38 +265,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602939419673" />
-    <state width="1877" height="405" key="GridCell.Tab.0.bottom" timestamp="1604488165698">
+    <state width="1877" height="405" key="GridCell.Tab.0.bottom" timestamp="1604496473487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="405" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604488165698" />
-    <state width="1877" height="405" key="GridCell.Tab.0.center" timestamp="1604488165698">
+    <state width="1877" height="405" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604496473487" />
+    <state width="1877" height="405" key="GridCell.Tab.0.center" timestamp="1604496473487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="405" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604488165698" />
-    <state width="1877" height="405" key="GridCell.Tab.0.left" timestamp="1604488165698">
+    <state width="1877" height="405" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604496473487" />
+    <state width="1877" height="405" key="GridCell.Tab.0.left" timestamp="1604496473487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="405" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604488165698" />
-    <state width="1877" height="405" key="GridCell.Tab.0.right" timestamp="1604488165698">
+    <state width="1877" height="405" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604496473487" />
+    <state width="1877" height="405" key="GridCell.Tab.0.right" timestamp="1604496473487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="405" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604488165698" />
-    <state width="1877" height="405" key="GridCell.Tab.1.bottom" timestamp="1604488165698">
+    <state width="1877" height="405" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604496473487" />
+    <state width="1877" height="405" key="GridCell.Tab.1.bottom" timestamp="1604496473488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="405" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604488165698" />
-    <state width="1877" height="405" key="GridCell.Tab.1.center" timestamp="1604488165698">
+    <state width="1877" height="405" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604496473488" />
+    <state width="1877" height="405" key="GridCell.Tab.1.center" timestamp="1604496473488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="405" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604488165698" />
-    <state width="1877" height="405" key="GridCell.Tab.1.left" timestamp="1604488165698">
+    <state width="1877" height="405" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604496473488" />
+    <state width="1877" height="405" key="GridCell.Tab.1.left" timestamp="1604496473487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="405" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604488165698" />
-    <state width="1877" height="405" key="GridCell.Tab.1.right" timestamp="1604488165698">
+    <state width="1877" height="405" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604496473487" />
+    <state width="1877" height="405" key="GridCell.Tab.1.right" timestamp="1604496473488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="405" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604488165698" />
+    <state width="1877" height="405" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604496473488" />
     <state width="1877" height="354" key="GridCell.Tab.2.bottom" timestamp="1604486837703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -325,10 +325,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602710971590" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604422083910">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604488803889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604422083910" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604488803889" />
     <state x="772" y="403" width="376" height="320" key="com.intellij.database.actions.DdlActions$CommentOnObjectAction$1" timestamp="1604420902193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

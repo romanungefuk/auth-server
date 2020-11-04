@@ -140,7 +140,7 @@ public class UserController {
      * @throws MessagingException
      */
     @PostMapping(value = "/api/v1/update-by-mail")
-    public ResponseEntity<?> delete(@RequestParam (name = "email")String email) throws MessagingException {
+    public ResponseEntity<?> updateByEmail(@RequestParam (name = "email")String email) throws MessagingException {
         JSONObject responseObject = new JSONObject();
 
         User user = userService.findByEmail(email);
@@ -189,25 +189,19 @@ public class UserController {
      * @return
      */
     @DeleteMapping(value = "/api/v1/delete-user")
-    public ResponseEntity<?> delete(@RequestParam (name = "id")Long id,
-                                  @RequestParam (name = "token")String token){
+    public ResponseEntity<?> delete(@RequestParam (value = "id", defaultValue = "-1")Long id,
+                                           @RequestParam (value = "token", defaultValue = "-1") String token){
         JSONObject responseObject = new JSONObject();
 
         User user = userService.findById(id);
 //        System.err.println("user = "+user == null);
         System.err.println("token = "+token.equals(this.token.getToken()));
-        if (user == null) {
+        if (userService.findById(id)==null || !token.equals(this.token.getToken())){
             responseObject.put("codeResponse", 404);
-            responseObject.put("message", "Пользователь не найден");
+            responseObject.put("message", "Запись о пользователе не найдена или не корректный токен");
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
 
-        }else if (!token.equals(this.token.getToken())) {
-
-            responseObject.put("codeResponse", 401);
-            responseObject.put("message", "не корректный токен");
-            log.info(responseObject.toString());
-            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.UNAUTHORIZED);
         }else{
             userService.delete(user.getId());
             experienceService.delete(user.getId());
