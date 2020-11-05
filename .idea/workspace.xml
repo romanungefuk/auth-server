@@ -22,22 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="обновил модель Добавил StartLocation">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="Добавлен https ри помощи сертификата от letsencrypt.&#10;Защещенные запросы идут на порт 8443. Если запрос идет на порт 8080 по http, то добавлен редирект на 8443. Сертификат получилось сгенерировать только на домен www.eq-up.ru. На eq-up.ru почему-то айпишник не прописан, если потребуется, то надо будет разбираться.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/equp.p12" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backend-equp-prod.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/backend-equp-prod.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backend-equp-prod.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/backend-equp-prod.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/change_password_page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/views/password_changed_successfully.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2020-11-04T22-22-58_583-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.equp.back.backend.BackendApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.equp.back.backend.BackendApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.equp.back.backend.BackendApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.equp.back.backend.BackendApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +40,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,12 +53,17 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="romanungefuk" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Users\hotli\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+        <option name="mavenHome" value="C:\Users\Pavel\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -92,7 +84,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -106,13 +98,14 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Java\EQup\rep2810\src\main\resources" />
-      <recent name="D:\Java\EQup\EQup_back\src\main\java\com\equp\back\backend\email" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Java\EQup\rep2810\src\main\resources\templates" />
       <recent name="D:\Java\EQup\rep2810\src\main\webapp\WEB-INF\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hotli\Documents\EQup\equp-backend\src\main\resources" />
+      <recent name="D:\Java\EQup\rep2810\src\main\resources" />
+      <recent name="D:\Java\EQup\EQup_back\src\main\java\com\equp\back\backend\email" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BackendApplication">
@@ -213,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604513686465</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавлен https ри помощи сертификата от letsencrypt.&#10;Защещенные запросы идут на порт 8443. Если запрос идет на порт 8080 по http, то добавлен редирект на 8443. Сертификат получилось сгенерировать только на домен www.eq-up.ru. На eq-up.ru почему-то айпишник не прописан, если потребуется, то надо будет разбираться.">
+      <created>1604536479389</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604536479389</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +234,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="обновил модель и запрос обновления" />
     <MESSAGE value="обновил модель Добавил StartLocation" />
-    <option name="LAST_COMMIT_MESSAGE" value="обновил модель Добавил StartLocation" />
+    <MESSAGE value="Добавлен https ри помощи сертификата от letsencrypt.&#10;Защещенные запросы идут на порт 8443. Если запрос идет на порт 8080 по http, то добавлен редирект на 8443. Сертификат получилось сгенерировать только на домен www.eq-up.ru. На eq-up.ru почему-то айпишник не прописан, если потребуется, то надо будет разбираться." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен https ри помощи сертификата от letsencrypt.&#10;Защещенные запросы идут на порт 8443. Если запрос идет на порт 8080 по http, то добавлен редирект на 8443. Сертификат получилось сгенерировать только на домен www.eq-up.ru. На eq-up.ru почему-то айпишник не прописан, если потребуется, то надо будет разбираться." />
   </component>
   <component name="WindowStateProjectService">
     <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1602948858425">
@@ -285,41 +286,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602939419673" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1604576504811">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1604537708995">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604576504811" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604537708995" />
     <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1604576504810">
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1604537708994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604576504810" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604537708994" />
     <state width="1877" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1604576504810">
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1604537708994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604576504810" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604537708994" />
     <state width="1877" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1604576504811">
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1604537708995">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604576504811" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604537708995" />
     <state width="1877" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
-    <state width="1877" height="286" key="GridCell.Tab.1.bottom" timestamp="1604522710999">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom" timestamp="1604536222733">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604536222733" />
     <state width="1877" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710999" />
-    <state width="1877" height="286" key="GridCell.Tab.1.center" timestamp="1604522710998">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.1.center" timestamp="1604536222733">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1604536222733" />
     <state width="1877" height="286" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
-    <state width="1877" height="286" key="GridCell.Tab.1.left" timestamp="1604522710998">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.1.left" timestamp="1604536222733">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1604536222733" />
     <state width="1877" height="286" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710998" />
-    <state width="1877" height="286" key="GridCell.Tab.1.right" timestamp="1604522710999">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.1.right" timestamp="1604536222733">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1604536222733" />
     <state width="1877" height="286" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604522710999" />
     <state width="1877" height="354" key="GridCell.Tab.2.bottom" timestamp="1604511818894">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -349,9 +354,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604503344199" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604513870594">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1604537072740">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604537072740" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604513870594" />
     <state x="772" y="403" width="376" height="320" key="com.intellij.database.actions.DdlActions$CommentOnObjectAction$1" timestamp="1604420902193">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -377,6 +383,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="565" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604070535633" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604537408786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1604537408786" />
     <state x="736" y="278" key="refactoring.ChangeSignatureDialog" timestamp="1604070490878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

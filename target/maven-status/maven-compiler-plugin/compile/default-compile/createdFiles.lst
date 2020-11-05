@@ -13,10 +13,13 @@ com\equp\back\backend\service\impl\ExperienceServiceImpl.class
 com\equp\back\backend\repository\ExperienceRepository.class
 com\equp\back\backend\service\UserService.class
 com\equp\back\backend\controller\UserController.class
+com\equp\back\backend\config\ServerConfig.class
+com\equp\back\backend\config\ServerConfig$1.class
 com\equp\back\backend\model\Mood.class
 com\equp\back\backend\model\JWT.class
 com\equp\back\backend\config\MailConfig.class
 com\equp\back\backend\service\TestresultService.class
+com\equp\back\backend\config\SecurityConfig.class
 com\equp\back\backend\exception\UserNotFound.class
 com\equp\back\backend\model\TestResult.class
 com\equp\back\backend\model\Status.class
