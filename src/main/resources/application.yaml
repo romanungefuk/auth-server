@@ -5,7 +5,7 @@ server:
   ssl:
     key-store-type: PKCS12
   # The path to the keystore containing the certificate
-    key-store: classpath:equp.p12
+    key-store: /var/www/equp/cert/equp.p12
   # The password used to generate the certificate
     key-store-password:
 #  # The alias mapped to the certificate
