@@ -28,7 +28,7 @@ public class TestResult {
     private double attitudes;
 
     @Column(name = "selfregulation")
-    private double selfregulation;
+    private double selfRegulation;
 
     @Column(name = "empathy")
     private double empathy;
@@ -37,7 +37,7 @@ public class TestResult {
         this.userId = userId;
         this.mindfulness = 0.0;
         this.attitudes = 0.0;
-        this.selfregulation = 0.0;
+        this.selfRegulation = 0.0;
         this.empathy = 0.0;
         this.startLocation = 0.0;
     }
@@ -78,11 +78,11 @@ public class TestResult {
     }
 
     public double getSelfregulation() {
-        return selfregulation;
+        return selfRegulation;
     }
 
     public void setSelfregulation(double selfRegulation) {
-        this.selfregulation = selfRegulation;
+        this.selfRegulation = selfRegulation;
     }
 
     public double getEmpathy() {
