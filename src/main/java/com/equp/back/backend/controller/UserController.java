@@ -132,6 +132,52 @@ public class UserController {
 
     }
 
+    /**Обновление пароля в приложении
+     *
+     * @param id
+     * @return
+     */
+
+    @PostMapping(value = "/api/v1/update-by-app")
+    public ResponseEntity<?> userUpdate(@RequestParam(value = "id", defaultValue = "-1")Long id,
+                                        @RequestParam (value = "token", defaultValue = "-1") String token,
+                                        @RequestParam (value = "newPassword", defaultValue = "-1") String newPassword) {
+
+        JSONObject responseObject = new JSONObject();
+        Experience experience = experienceService.findByUserId(id);
+        TestResult testResult = testresultService.findByUserId(id);
+        User user = new User();
+
+        if (experience == null || user == null || testResult == null || !token.equals(this.token.getToken())) {
+            responseObject.put("codeResponse", 404);
+            responseObject.put("message", "Запись о пользователе не найдена или не корректный токен или не корректный запрос");
+            log.info(responseObject.toString());
+            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
+
+        } else
+
+            user.setEmail(userService.findById(id).getEmail());
+            user.setName(userService.findById(id).getName());
+
+            userService.update(userService.findById(id), newPassword);
+            {
+
+            responseObject.put("id", id);
+            responseObject.put("token", token);
+            responseObject.put("message", "Пароль обновлен");
+            responseObject.put("codeResponse", 302);
+            responseObject.put("user", user);
+            responseObject.put("experience", experience);
+            responseObject.put("testResult", testResult);
+            log.info(responseObject.toString());
+
+            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
+
+        }
+    }
+
+
+
     /**Обновление пароля с помощью отправки по email
      *
      * @param email
@@ -184,7 +230,7 @@ public class UserController {
                     "если же подобные письма будут продолжать приходить, обратитесь в нашу поддерку." +
                     "</h4>"+
 //                    "<a href=\"http://localhost:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">Сменить пароль</a>" +
-                    "<a href=\"http://www.eq-up.ru:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">change password</a>"+
+                    "<a href=\"http://www.eq-up.ru:8443/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">Сменить пароль</a>"+
                     "</br>"+
                     "</br>"+ "</br>"+
                     "</br>"+
