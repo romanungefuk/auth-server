@@ -150,7 +150,7 @@ public class UserController {
 
         if (experience == null || user == null || testResult == null || !token.equals(this.token.getToken())) {
             responseObject.put("codeResponse", 404);
-            responseObject.put("message", "Запись о пользователе не найдена или не корректный токен или не корректный запрос");
+            responseObject.put("message", "Запись о пользователе не найдена, или не корректный токен, или не корректный запрос");
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
 
