@@ -68,11 +68,11 @@ public class ChangePasswordController {
                     "<title>Title</title>"+
                     "</head>"+
                     "<body>"+
-                    "<p>Password  was  changed successfully</p>"+
+                    "<p>Пароль был изменен</p>"+
                     "</body>"+
                     "</html>";
 
-            message.setContent(htmlMsg, "text/html");
+            message.setContent(htmlMsg, "text/html; charset=utf-8");
             helper.setTo(user.getEmail());
             helper.setSubject("Password was changed successfully");
             this.emailSender.send(message);
