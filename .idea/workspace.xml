@@ -22,18 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="обновил модель Добавил StartLocation">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Experience.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/TestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/TestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MailConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MailConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MyConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MyConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Experience.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Experience.class" afterDir="false" />
-    </list>
+    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="обновил модель Добавил StartLocation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +187,7 @@
       <workItem from="1604388280408" duration="9093000" />
       <workItem from="1604484139862" duration="122000" />
       <workItem from="1604484872454" duration="18039000" />
-      <workItem from="1604511837737" duration="25494000" />
+      <workItem from="1604511837737" duration="25930000" />
     </task>
     <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
       <created>1604488797266</created>
@@ -235,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604684245602</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="обновил модель Добавил StartLocation">
+      <created>1604685369728</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604685369728</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,10 +363,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604503344199" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604682491358">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604685371667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604682491358" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604685371667" />
     <state x="772" y="403" width="376" height="320" key="com.intellij.database.actions.DdlActions$CommentOnObjectAction$1" timestamp="1604420902193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
