@@ -77,11 +77,11 @@ public class TestResult {
         this.attitudes = attitudes;
     }
 
-    public double getSelfregulation() {
+    public double getSelfRegulation() {
         return selfRegulation;
     }
 
-    public void setSelfregulation(double selfRegulation) {
+    public void setSelfRegulation(double selfRegulation) {
         this.selfRegulation = selfRegulation;
     }
 

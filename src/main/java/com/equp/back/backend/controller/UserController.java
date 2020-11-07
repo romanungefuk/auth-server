@@ -330,8 +330,8 @@ public class UserController {
                 if (experienceAttitudes > experience.getAttitudes()){
                     experience.setAttitudes(experienceAttitudes);
                 }
-                if (experienceSelfRegulation > experience.getSelfregulation()){
-                    experience.setSelfregulation(experienceSelfRegulation);
+                if (experienceSelfRegulation > experience.getSelfRegulation()){
+                    experience.setSelfRegulation(experienceSelfRegulation);
                 }
                 if (experienceEmpathy > experience.getEmpathy()){
                     experience.setEmpathy(experienceEmpathy);
@@ -347,8 +347,8 @@ public class UserController {
                 if (testResultAttitudes > testResult.getAttitudes()){
                     testResult.setAttitudes(testResultAttitudes);
                 }
-                if (testResultSelfRegulation > testResult.getSelfregulation()){
-                    testResult.setSelfregulation(testResultSelfRegulation);
+                if (testResultSelfRegulation > testResult.getSelfRegulation()){
+                    testResult.setSelfRegulation(testResultSelfRegulation);
                 }
                 if (testResultEmpathy > testResult.getEmpathy()){
                     testResult.setEmpathy(testResultEmpathy);

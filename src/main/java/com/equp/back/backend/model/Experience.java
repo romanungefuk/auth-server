@@ -67,11 +67,11 @@ public class Experience {
         this.attitudes = attitudes;
     }
 
-    public double getSelfregulation() {
+    public double getSelfRegulation() {
         return selfRegulation;
     }
 
-    public void setSelfregulation(double selfregulation) {
+    public void setSelfRegulation(double selfregulation) {
         this.selfRegulation = selfregulation;
     }
 
