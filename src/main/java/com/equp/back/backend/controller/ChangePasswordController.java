@@ -54,7 +54,21 @@ public class ChangePasswordController {
 
         User user = userService.findById(id);
 
-        if (password.equals(passwordRepeat)){
+        if (password.length() < 4 || passwordRepeat.length() < 4){
+            model.addAttribute("email", email);
+            model.addAttribute("name", name);
+            model.addAttribute("id", id);
+            model.addAttribute("message","Слабый пароль");
+        }
+
+        else if (!password.equals(passwordRepeat)){
+            model.addAttribute("email", email);
+            model.addAttribute("name", name);
+            model.addAttribute("id", id);
+            model.addAttribute("message","Пароли не сходятся");
+        }
+
+        else if (password.equals(passwordRepeat)){
 
             userService.update(user,password);
 
@@ -78,13 +92,7 @@ public class ChangePasswordController {
             this.emailSender.send(message);
 
             return "password_changed_successfully";
-        }else if (!password.equals(passwordRepeat)){
-            model.addAttribute("email", email);
-            model.addAttribute("name", name);
-            model.addAttribute("id", id);
-            model.addAttribute("message","Пароли не сходятся");
         }
-
         return "change_password_page";
 
     }

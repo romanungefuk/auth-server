@@ -229,7 +229,7 @@ public class UserController {
                     "<h4>Если Вы этого не делали, то не обращайте внимания на это письмо, " +
                     "если же подобные письма будут продолжать приходить, обратитесь в нашу поддерку." +
                     "</h4>"+
-//                    "<a href=\"http://localhost:8080/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">Сменить пароль</a>" +
+//                    "<a href=\"http://localhost:8443/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">Сменить пароль</a>" +
                     "<a href=\"http://www.eq-up.ru:8443/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">Сменить пароль</a>"+
                     "</br>"+
                     "</br>"+ "</br>"+
