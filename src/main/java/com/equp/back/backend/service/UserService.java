@@ -13,6 +13,8 @@ public interface UserService {
 
     boolean update(User user, String password);
 
+    boolean updateName(User user, String newName);
+
     boolean delete(Long id);
 
     User findByEmail(String email);
