@@ -2,10 +2,15 @@ package com.equp.back.backend.service.impl;
 
 import com.equp.back.backend.exception.UserNotFound;
 import com.equp.back.backend.model.Experience;
+import com.equp.back.backend.model.Role;
+import com.equp.back.backend.model.Status;
 import com.equp.back.backend.model.User;
+import com.equp.back.backend.repository.RoleRepository;
 import com.equp.back.backend.repository.UserRepository;
 import com.equp.back.backend.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,16 +21,35 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
 
+    private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
+    private final BCryptPasswordEncoder passwordEncoder;
+
     @Autowired
-    private UserRepository userRepository;
+    public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository, BCryptPasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
 
     @Override
     public void create(User user) {
-        userRepository.save(user);
+
+        Role roleUser = roleRepository.findByName("ROLE_USER");
+        List<Role> userRoles = new ArrayList<>();
+        userRoles.add(roleUser);
+
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRoles(userRoles);
+        user.setStatus(Status.ACTIVE);
+
+        User registeredUser = userRepository.save(user);
+        log.info("IN register - user: {} successfully registered", registeredUser);
     }
 
     @Override
@@ -73,6 +97,11 @@ public class UserServiceImpl implements UserService {
     public User findByEmail(String email){
 
         return userRepository.findByEmail(email);
+    }
+
+    @Override
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
 }

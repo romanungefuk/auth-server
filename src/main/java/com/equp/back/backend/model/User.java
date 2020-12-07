@@ -2,25 +2,26 @@ package com.equp.back.backend.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
 @Slf4j
-public class User {
+@Data
+public class User extends BaseEntity {
 
-    @Id
-    @JsonIgnore
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "username")
+    private String username;
 
-    private Long id;
+    @Column(name = "first_name")
+    private String firstName;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "last_name")
+    private String lastName;
 
     @Column(name = "email")
     private String email;
@@ -29,16 +30,22 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_roles",
+            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
+    private List<Role> roles;
+
     public User(String username, String email, String password) {
-        this.name = username;
+        this.username = username;
         this.email = email;
         this.password = password;
-        new Experience(this.id);
+        new Experience(super.getId());
     }
 
-    public User(Long id, String name, String email, String password) {
-        this.id = id;
-        this.name = name;
+    public User(Long id, String username, String email, String password) {
+        super.setId(id);
+        this.username = username;
         this.email = email;
         this.password = password;
     }
@@ -48,19 +55,19 @@ public class User {
     }
 
     public Long getId() {
-        return id;
+        return super.getId();
     }
 
     public void setId(Long id) {
-        this.id = id;
+        super.setId(id);
     }
 
     public String getName() {
-        return name;
+        return username;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.username = name;
     }
 
     public String getEmail() {
@@ -77,7 +84,7 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-        System.out.printf("у пользователя %S, пароль должен был смениться на %S \n",this.name, this.password);
+        System.out.printf("у пользователя %S, пароль должен был смениться на %S \n",this.username, this.password);
 
     }
 
