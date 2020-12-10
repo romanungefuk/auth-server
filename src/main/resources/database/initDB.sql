@@ -26,3 +26,13 @@ CREATE TABLE IF NOT EXISTS test_result
     selfregulation  DOUBLE PRECISION NOT NULL ,
     empathy  DOUBLE PRECISION NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS moods
+(
+    id bigserial,
+    id_user bigserial not null,
+    date bigint default 0 not null,
+    mood int not null,
+    emotion int not null,
+    text text
+);
