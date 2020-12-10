@@ -44,6 +44,6 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
 jwt:
   token:
-    secret: jwtappdemo
+    secret: {тут нужено секретное слово, для безопасности вбиваем каждый раз новое при сборке}
     expired: 3600000
 
