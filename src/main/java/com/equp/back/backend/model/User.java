@@ -14,12 +14,14 @@ import java.util.List;
 @Data
 public class User extends BaseEntity {
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "name")
+    private String name;
 
+    @JsonIgnore
     @Column(name = "first_name")
     private String firstName;
 
+    @JsonIgnore
     @Column(name = "last_name")
     private String lastName;
 
@@ -30,22 +32,23 @@ public class User extends BaseEntity {
     @Column(name = "password")
     private String password;
 
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles",
             joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
     private List<Role> roles;
 
-    public User(String username, String email, String password) {
-        this.username = username;
+    public User(String name, String email, String password) {
+        this.name = name;
         this.email = email;
         this.password = password;
         new Experience(super.getId());
     }
 
-    public User(Long id, String username, String email, String password) {
+    public User(Long id, String name, String email, String password) {
         super.setId(id);
-        this.username = username;
+        this.name = name;
         this.email = email;
         this.password = password;
     }
@@ -63,11 +66,11 @@ public class User extends BaseEntity {
     }
 
     public String getName() {
-        return username;
+        return name;
     }
 
     public void setName(String name) {
-        this.username = name;
+        this.name = name;
     }
 
     public String getEmail() {
@@ -84,7 +87,7 @@ public class User extends BaseEntity {
 
     public void setPassword(String password) {
         this.password = password;
-        System.out.printf("у пользователя %S, пароль должен был смениться на %S \n",this.username, this.password);
+        System.out.printf("у пользователя %S, пароль должен был смениться на %S \n",this.name, this.password);
 
     }
 

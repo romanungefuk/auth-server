@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
@@ -88,49 +89,6 @@ public class UserController {
             responseObject.put("testResult", testresultService.findByUserId(user.getId()));
         }
         return new ResponseEntity<>(responseObject.toMap(), HttpStatus.CREATED);
-    }
-
-
-    /**
-     * Авторизация действующего пользователя
-     *
-     * @param email
-     * @param password
-     * @return
-     */
-    @GetMapping(value = "/api/v1/auth")
-    public ResponseEntity<?> auth(@RequestParam(name = "email") String email,
-                                  @RequestParam(name = "password") String password) {
-
-        JSONObject responseObject = new JSONObject();
-
-        User user = userService.findByEmail(email);
-        if (user == null) {
-
-            responseObject.put("codeResponse", 404);
-            responseObject.put("message", "Пользователь с такими email не найден");
-            log.info(responseObject.toString());
-
-            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
-        } else if (!user.getPassword().equals(password)) {
-
-            responseObject.put("codeResponse", 401);
-            responseObject.put("message", "Не верный пароль");
-            log.info(responseObject.toString());
-            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.UNAUTHORIZED);
-        } else {
-
-            responseObject.put("id", user.getId());
-            responseObject.put("token", token.getToken());
-            responseObject.put("message", "Пользователь найден");
-            responseObject.put("codeResponse", 201);
-            responseObject.put("user", user);
-            responseObject.put("experience", experienceService.findByUserId(user.getId()));
-            responseObject.put("testResult", testresultService.findByUserId(user.getId()));
-            log.info(responseObject.toString());
-            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.FOUND);
-        }
-
     }
 
     /**

@@ -26,18 +26,22 @@ import java.util.Date;
 @Data
 public class BaseEntity {
 
+    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonIgnore
     @CreatedDate
     @Column(name = "created")
     private Date created;
 
+    @JsonIgnore
     @LastModifiedDate
     @Column(name = "updated")
     private Date updated;
 
+    @JsonIgnore
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private Status status;

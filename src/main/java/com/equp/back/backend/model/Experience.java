@@ -13,7 +13,6 @@ public class Experience {
     @JsonIgnore
     @Id
     @Column(name = "id")
-
     private Long userId;
 
     @Column(name = "mindfulness")
