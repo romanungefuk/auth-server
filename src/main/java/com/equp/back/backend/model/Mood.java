@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "moods")
-@Slf4j
+
 public class Mood {
 
     @JsonIgnore
@@ -46,4 +46,51 @@ public class Mood {
         this.text = text;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
+    }
+
+    public long getDate() {
+        return date;
+    }
+
+    public void setDate(long date) {
+        this.date = date;
+    }
+
+    public int getMood() {
+        return mood;
+    }
+
+    public void setMood(int mood) {
+        this.mood = mood;
+    }
+
+    public int getEmotion() {
+        return emotion;
+    }
+
+    public void setEmotion(int emotion) {
+        this.emotion = emotion;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 }

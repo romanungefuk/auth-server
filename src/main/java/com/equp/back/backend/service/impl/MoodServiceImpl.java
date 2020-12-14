@@ -4,10 +4,12 @@ import com.equp.back.backend.model.Mood;
 import com.equp.back.backend.repository.MoodRepository;
 import com.equp.back.backend.service.MoodService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class MoodServiceImpl implements MoodService {
 
     @Autowired
