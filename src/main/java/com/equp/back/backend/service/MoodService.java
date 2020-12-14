@@ -1,11 +1,11 @@
 package com.equp.back.backend.service;
 
 import com.equp.back.backend.model.Mood;
-import com.equp.back.backend.model.User;
 
 import java.util.List;
 
 public interface MoodService {
+    void create(Mood mood);
 
     void createList(List<Mood> moods);
 

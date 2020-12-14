@@ -14,6 +14,11 @@ public class MoodServiceImpl implements MoodService {
     private MoodRepository moodRepository;
 
     @Override
+    public void create(Mood mood) {
+
+    }
+
+    @Override
     public void createList(List<Mood> moods) {
         List<Mood> moodList = new ArrayList<>();
 

@@ -23,24 +23,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/MoodController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/MoodRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/MoodService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/MoodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/information_schema.FNRwLQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08_[Default_Changelist]/ChangePasswordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/05127448-3fb1-4349-babf-629c646325ee/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EQup_back.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EQup_back.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/MoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/MoodController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Mood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Mood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/MoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/MoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/MoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/MoodServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Mood.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Mood.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/initDB.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +145,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="EQup_back" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.equp.back.backend.BackendApplication" />
@@ -203,7 +213,8 @@
       <workItem from="1607216252004" duration="15000" />
       <workItem from="1607234115511" duration="3558000" />
       <workItem from="1607594901351" duration="6978000" />
-      <workItem from="1607615375233" duration="1726000" />
+      <workItem from="1607615375233" duration="2746000" />
+      <workItem from="1607975203553" duration="7163000" />
     </task>
     <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
       <created>1604488797266</created>
@@ -240,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604578736902</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="создал mood и его метод по записи добавили инициализацию схемы">
+      <created>1607617936334</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607617936334</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +281,7 @@
     <MESSAGE value="обновил модель Добавил StartLocation" />
     <MESSAGE value="Добавлен https ри помощи сертификата от letsencrypt.&#10;Защещенные запросы идут на порт 8443. Если запрос идет на порт 8080 по http, то добавлен редирект на 8443. Сертификат получилось сгенерировать только на домен www.eq-up.ru. На eq-up.ru почему-то айпишник не прописан, если потребуется, то надо будет разбираться." />
     <MESSAGE value="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала." />
-    <option name="LAST_COMMIT_MESSAGE" value="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала." />
+    <MESSAGE value="создал mood и его метод по записи добавили инициализацию схемы" />
+    <option name="LAST_COMMIT_MESSAGE" value="создал mood и его метод по записи добавили инициализацию схемы" />
   </component>
 </project>

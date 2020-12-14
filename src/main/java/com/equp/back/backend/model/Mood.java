@@ -37,8 +37,8 @@ public class Mood {
     public Mood() {
     }
 
-    public Mood(Long id, Long idUser, long date, int mood, int emotion, String text) {
-        this.id = id;
+    public Mood(Long idUser, long date, int mood, int emotion, String text) {
+
         this.idUser = idUser;
         this.date = date;
         this.mood = mood;
