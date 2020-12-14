@@ -4,6 +4,8 @@ import com.equp.back.backend.model.Experience;
 import com.equp.back.backend.model.JWT;
 import com.equp.back.backend.model.TestResult;
 import com.equp.back.backend.model.User;
+import com.equp.back.backend.repository.RoleRepository;
+import com.equp.back.backend.security.jwt.JwtTokenProvider;
 import com.equp.back.backend.service.ExperienceService;
 import com.equp.back.backend.service.TestresultService;
 import com.equp.back.backend.service.UserService;
@@ -19,9 +21,12 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.util.Arrays;
+import java.util.Date;
 
 
 @RestController
+@RequestMapping(value ="/api/v1/user")
 @Slf4j
 public class UserController {
 
@@ -30,15 +35,19 @@ public class UserController {
     private final ExperienceService experienceService;
     private final TestresultService testresultService;
     private final JavaMailSender emailSender;
+    private final RoleRepository roleRepository;
+    private final JwtTokenProvider jwtTokenProvider;
     JWT token = new JWT(); // временный токен
 
 
     @Autowired
-    public UserController(UserService userService, ExperienceService experienceService, TestresultService testresultService, JavaMailSender emailSender) {
+    public UserController(UserService userService, ExperienceService experienceService, TestresultService testresultService, JavaMailSender emailSender, RoleRepository roleRepository, JwtTokenProvider jwtTokenProvider) {
         this.userService = userService;
         this.experienceService = experienceService;
         this.testresultService = testresultService;
         this.emailSender = emailSender;
+        this.roleRepository = roleRepository;
+        this.jwtTokenProvider = jwtTokenProvider;
     }
 
 
@@ -50,7 +59,7 @@ public class UserController {
      * @param password
      * @return
      */
-    @PostMapping(value = "/api/v1/signup")
+    @PostMapping(value = "/signup")
     public ResponseEntity<?> signup(@RequestParam(name = "username") String username,
                                     @RequestParam(name = "email") String email,
                                     @RequestParam(name = "password") String password) {
@@ -66,7 +75,16 @@ public class UserController {
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.PRECONDITION_FAILED);
         } else {
+            String encryptedPassword = jwtTokenProvider.passwordEncoder().encode(password);
+            log.info("is password valid "+ new BCryptPasswordEncoder().matches(password,encryptedPassword));
+            log.info("correctPassword "+encryptedPassword);
             User user = new User(username, email, password);
+            user.setFirstName(username);
+            user.setLastName(username);
+            user.setRoles(Arrays.asList(roleRepository.findByName("ROLE_USER")));
+            Date date = new Date(System.currentTimeMillis());
+            user.setCreated(date);
+            user.setUpdated(date);
             userService.create(user);
             log.info(responseObject.toString());
 
@@ -78,10 +96,10 @@ public class UserController {
             testresultService.create(testresult);
             log.info("результат теста для" + user.getName() + " создан");
 
-            JWT token = new JWT();
+            String token = jwtTokenProvider.createToken(email, user.getRoles());
 
             responseObject.put("id", user.getId());
-            responseObject.put("token", token.getToken());
+            responseObject.put("token", token);
             responseObject.put("message", "пользователь с email " + email + " создан");
             responseObject.put("codeResponse", 201);
             responseObject.put("user", user);

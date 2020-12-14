@@ -63,6 +63,7 @@ public class AuthenticationRestController {
             boolean isPasswordCorrect = false;
             if(user!=null){
                 isPasswordCorrect = new BCryptPasswordEncoder().matches(password, user.getPassword());
+                log.info("isPasswordCorrect" + isPasswordCorrect +"password "+password + "user.getPassword()"+ user.getPassword());
             }
 
             if (user == null) {
