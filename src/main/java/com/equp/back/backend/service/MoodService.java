@@ -11,8 +11,6 @@ public interface MoodService {
 
     List<Mood> findMoods(long id);
 
-    List<Mood> findByIdUser(Long idUser);
-
     boolean delete(Long id);
 
 }

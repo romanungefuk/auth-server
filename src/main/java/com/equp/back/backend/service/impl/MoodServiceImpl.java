@@ -4,6 +4,8 @@ import com.equp.back.backend.model.Mood;
 import com.equp.back.backend.repository.MoodRepository;
 import com.equp.back.backend.service.MoodService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,24 +26,28 @@ public class MoodServiceImpl implements MoodService {
     public void createList(List<Mood> moods) {
         List<Mood> moodList = new ArrayList<>();
 
-        for (Mood m : moods){
-         moodRepository.save(m);
+        for (Mood m : moods) {
+            moodRepository.save(m);
         }
     }
 
     @Override
     public List<Mood> findMoods(long id) {
+
+
         return null;
+    }
+
+
+
+    @Override
+    public boolean delete(Long id) {
+        return false;
     }
 
     @Override
     public List<Mood> findByIdUser(Long idUser) {
         return null;
-    }
-
-    @Override
-    public boolean delete(Long id) {
-        return false;
     }
 
 
