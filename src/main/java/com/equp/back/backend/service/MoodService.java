@@ -2,15 +2,13 @@ package com.equp.back.backend.service;
 
 import com.equp.back.backend.model.Mood;
 
-import java.util.List;
-
 public interface MoodService {
     void create(Mood mood);
 
-    void createList(List<Mood> moods);
+    Mood findMood(Long id);
 
-    List<Mood> findMoods(long id);
+    boolean updateMood(Mood mood);
 
-    boolean delete(Long id);
+    boolean delete(Mood mood);
 
 }

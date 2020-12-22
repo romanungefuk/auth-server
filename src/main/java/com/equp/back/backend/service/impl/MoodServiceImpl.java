@@ -1,54 +1,54 @@
 package com.equp.back.backend.service.impl;
 
+import com.equp.back.backend.exception.MoodNotFoundException;
 import com.equp.back.backend.model.Mood;
 import com.equp.back.backend.repository.MoodRepository;
 import com.equp.back.backend.service.MoodService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Service
+@Slf4j
 public class MoodServiceImpl implements MoodService {
+    private MoodRepository moodRepository;
 
     @Autowired
-    private MoodRepository moodRepository;
+    public void setMoodRepository(MoodRepository moodRepository){
+        this.moodRepository = moodRepository;
+    }
+
+
+    public Mood saveOrUpdate(Mood mood){
+        return moodRepository.save(mood);
+    }
 
     @Override
     public void create(Mood mood) {
-
-    }
-
-    @Override
-    public void createList(List<Mood> moods) {
-        List<Mood> moodList = new ArrayList<>();
-
-        for (Mood m : moods) {
-            moodRepository.save(m);
-        }
-    }
-
-    @Override
-    public List<Mood> findMoods(long id) {
-
-
-        return null;
+        moodRepository.save(mood);
     }
 
 
+    public Mood findMood(Long id) {
+        return moodRepository.findById(id).orElseThrow(() -> new MoodNotFoundException("не найдены записи об настроении с id = " + id));
+    }
 
     @Override
-    public boolean delete(Long id) {
+    public boolean updateMood(Mood mood) {
         return false;
     }
 
     @Override
-    public List<Mood> findByIdUser(Long idUser) {
-        return null;
+    public boolean delete(Mood mood) {
+
+        boolean result = false;
+        try {
+            moodRepository.delete(mood);
+            result = true;
+        }catch (Exception e){
+            System.out.println("ошибка при удалении настроения");
+            System.out.println(e.getStackTrace());
+        }
+        return result;
     }
-
-
 }

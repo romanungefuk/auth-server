@@ -1,54 +1,46 @@
 package com.equp.back.backend.controller;
 
-import com.equp.back.backend.model.*;
+import com.equp.back.backend.model.Mood;
+import com.equp.back.backend.model.User;
 import com.equp.back.backend.service.MoodService;
+import com.equp.back.backend.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
 @Slf4j
 public class MoodController {
 
+    private final UserService userService;
     private final MoodService moodService;
 
-
     @Autowired
-    public MoodController(MoodService moodService) {
+    public MoodController(UserService userService, MoodService moodService) {
+        this.userService = userService;
         this.moodService = moodService;
     }
 
-
     @PostMapping(value = "/api/v1/setmood")
-    public ResponseEntity<?> setMood(@RequestBody MoodJsonParser moodJsonParser){
+    public ResponseEntity<?> setMood(@RequestBody List<Mood> moodList){
 
-        List<Mood> moodList = new ArrayList<>();
 
         try {
-            for (int i = 0; i < moodJsonParser.getMood().length; i++){
-                moodList.add(new Mood(moodJsonParser.getIdUser(), moodJsonParser.getDate()[i],moodJsonParser.getMood()[i],moodJsonParser.getEmotion()[i], moodJsonParser.getText()[i]));
-
+            for (Mood mood : moodList){
+                moodService.create(mood);
+                log.info("создан " + mood);
             }
-            moodService.createList(moodList);
-
-        }catch (IndexOutOfBoundsException e){
-            System.out.println(e.getStackTrace());
         }catch (Exception ex){
             System.out.println(ex.getStackTrace());
         }
 
-        ;
-
-        for(int i = 0; i < moodList.size(); i++){
-
-        }
-
-        return new ResponseEntity<>(moodJsonParser, HttpStatus.CREATED);
+        return new ResponseEntity<>(moodList, HttpStatus.CREATED);
 
     }
 
@@ -56,12 +48,15 @@ public class MoodController {
     public ResponseEntity<?> getMood(@RequestParam(value = "id", defaultValue = "-1") Long id,
                                      @RequestParam(value = "token", defaultValue = "-1") String token){
 
-        for (Mood m: moodService.findByIdUser(id)){
-            System.out.println(m.getText());
+        User user = null;
+        try {
+            user = userService.findById(id);
+        }catch (Exception e){
+            System.out.println("пользователь с id " + id + "не найден");
+            System.out.println(e.getStackTrace());
         }
 
-
-        return new ResponseEntity<>(2, HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(user.getMoodList(), HttpStatus.ACCEPTED);
 
     }
 

@@ -13,7 +13,7 @@ public class Experience {
     @JsonIgnore
     @Id
     @Column(name = "id")
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
     @Column(name = "mindfulness")

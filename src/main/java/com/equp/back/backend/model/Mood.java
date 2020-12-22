@@ -1,96 +1,44 @@
 package com.equp.back.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "moods")
-
+@Slf4j
+@Data
 public class Mood {
 
     @JsonIgnore
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "id_user")
-    private Long idUser;
+//    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
 
     @Column(name = "date")
-    long date;
+    private long date;
 
     @Column(name = "mood")
-    int mood;
+    private int mood;
 
     @Column(name = "emotion")
-    int emotion;
+    private int emotion;
 
     @Column(name = "text")
-    String text;
+    private String text;
 
     public Mood() {
     }
 
-    public Mood(Long idUser, long date, int mood, int emotion, String text) {
 
-        this.idUser = idUser;
-        this.date = date;
-        this.mood = mood;
-        this.emotion = emotion;
-        this.text = text;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(Long idUser) {
-        this.idUser = idUser;
-    }
-
-    public long getDate() {
-        return date;
-    }
-
-    public void setDate(long date) {
-        this.date = date;
-    }
-
-    public int getMood() {
-        return mood;
-    }
-
-    public void setMood(int mood) {
-        this.mood = mood;
-    }
-
-    public int getEmotion() {
-        return emotion;
-    }
-
-    public void setEmotion(int emotion) {
-        this.emotion = emotion;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
 }

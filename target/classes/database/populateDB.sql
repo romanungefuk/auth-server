@@ -24,3 +24,10 @@ INSERT INTO test_result VALUES
 (5, 0.0, 0.0, 0.0, 0.0, 0.0),
 (6, 0.0, 0.0, 0.0, 0.0, 0.0),
 (7, 0.0, 0.0, 0.0, 0.0, 0.0);
+
+INSERT INTO moods VALUES
+(1, 2, 32142134, 21, 34, 'medfg'),
+(2, 2, 32142435, 21, 34, 'dfgdfgd dfg dg'),
+(3, 2, 32147657, 21, 34, ' gfdhhd hgd rgd rg'),
+(4, 2, 32142879, 21, 34, 'd fgdr gdg rdfg drfgd fgd');
+
