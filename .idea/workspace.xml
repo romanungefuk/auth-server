@@ -23,49 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/exception/MoodNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/MoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/MoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/exception/UserNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/exception/UserNotFoundEcveption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Experience.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Mood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Mood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/MoodJsonParser.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/ExperienceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/ExperienceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/MoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/MoodRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/TestresultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/TestresultRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/MoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/MoodService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/MoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/MoodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/populateDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/populateDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/MoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/MoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/exception/UserNotFound.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Experience.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Experience.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Mood.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Mood.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/repository/ExperienceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/repository/ExperienceRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/repository/MoodRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/repository/MoodRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/repository/TestresultRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/repository/TestresultRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/MoodService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/MoodService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/MoodServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/MoodServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/initDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/populateDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/populateDB.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +86,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-mvc-data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../july-market" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -231,7 +203,8 @@
       <workItem from="1608455611652" duration="1395000" />
       <workItem from="1608488599947" duration="1663000" />
       <workItem from="1608645056028" duration="12535000" />
-      <workItem from="1608666665488" duration="3651000" />
+      <workItem from="1608666665488" duration="25305000" />
+      <workItem from="1608830457933" duration="3998000" />
     </task>
     <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
       <created>1604488797266</created>
@@ -296,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608064367803</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Почти готово, но не сохраняет id пользователя (((">
+      <created>1608670389414</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608670389414</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,6 +303,21 @@
     <MESSAGE value="Обновил запись настроения" />
     <MESSAGE value="Допавил получения настроения - нужно смотреть через отладку" />
     <MESSAGE value="Доделал обновление настроения. не могу запустить полученияе настроения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доделал обновление настроения. не могу запустить полученияе настроения" />
+    <MESSAGE value="Почти готово, но не сохраняет id пользователя (((" />
+    <option name="LAST_COMMIT_MESSAGE" value="Почти готово, но не сохраняет id пользователя (((" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/MoodController.java</url>
+          <line>27</line>
+          <properties class="com.equp.back.backend.controller.MoodController" method="setMood">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

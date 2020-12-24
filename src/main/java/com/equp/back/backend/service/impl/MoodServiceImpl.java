@@ -4,18 +4,23 @@ import com.equp.back.backend.exception.MoodNotFoundException;
 import com.equp.back.backend.model.Mood;
 import com.equp.back.backend.repository.MoodRepository;
 import com.equp.back.backend.service.MoodService;
+import com.equp.back.backend.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @Slf4j
 public class MoodServiceImpl implements MoodService {
     private MoodRepository moodRepository;
+    private UserService userService;
 
     @Autowired
-    public void setMoodRepository(MoodRepository moodRepository){
+    public void setMoodRepository(MoodRepository moodRepository, UserService userService){
         this.moodRepository = moodRepository;
+        this.userService = userService;
     }
 
 
@@ -25,6 +30,7 @@ public class MoodServiceImpl implements MoodService {
 
     @Override
     public void create(Mood mood) {
+
         moodRepository.save(mood);
     }
 
@@ -49,6 +55,22 @@ public class MoodServiceImpl implements MoodService {
             System.out.println("ошибка при удалении настроения");
             System.out.println(e.getStackTrace());
         }
+        return result;
+    }
+
+    @Override
+    public List<Mood> readAll(long id) {
+
+        List<Mood> result = moodRepository.findAll();
+
+        for (int i = 0; i < result.size(); i++){
+            if (result.get(i).getUserId() != id) {
+                result.remove(result.get(i));
+                if (i > 0) i--;
+            }
+
+        }
+
         return result;
     }
 }

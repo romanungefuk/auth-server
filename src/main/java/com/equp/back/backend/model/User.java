@@ -16,7 +16,7 @@ import java.util.List;
 public class User {
 
     @Id
-    @JsonIgnore
+
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -32,8 +32,11 @@ public class User {
     private String password;
 
 
-    @OneToMany(mappedBy = "user")
-    private List<Mood> moodList;
+//    @OneToMany(fetch = FetchType.LAZY)
+//    @JoinTable(name = "moods_user",
+//            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+//            inverseJoinColumns = {@JoinColumn(name = "mood_id", referencedColumnName = "id")})
+//    private List<Mood> moodList;
 
     public User(String username, String email, String password) {
         this.name = username;

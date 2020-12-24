@@ -36,3 +36,9 @@ CREATE TABLE IF NOT EXISTS moods
     emotion int not null,
     text text
 );
+
+CREATE TABLE IF NOT EXISTS moods_user
+(
+    mood_id int not null,
+    user_id int not null
+);
