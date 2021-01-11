@@ -23,21 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/MoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/MoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Mood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Mood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/MoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/repository/MoodRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/MoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/MoodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/MoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/service/impl/MoodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/MoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/MoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Mood.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Mood.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/MoodServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/MoodServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/initDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MailConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MailConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/MoodService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/MoodService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +195,9 @@
       <workItem from="1608488599947" duration="1663000" />
       <workItem from="1608645056028" duration="12535000" />
       <workItem from="1608666665488" duration="25305000" />
-      <workItem from="1608830457933" duration="3998000" />
+      <workItem from="1608830457933" duration="5613000" />
+      <workItem from="1609074643252" duration="849000" />
+      <workItem from="1610384569943" duration="1375000" />
     </task>
     <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
       <created>1604488797266</created>
@@ -276,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608670389414</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Настроение готово сделано на костылях (без join, просто с idUser)">
+      <created>1608834872597</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608834872597</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +304,8 @@
     <MESSAGE value="Допавил получения настроения - нужно смотреть через отладку" />
     <MESSAGE value="Доделал обновление настроения. не могу запустить полученияе настроения" />
     <MESSAGE value="Почти готово, но не сохраняет id пользователя (((" />
-    <option name="LAST_COMMIT_MESSAGE" value="Почти готово, но не сохраняет id пользователя (((" />
+    <MESSAGE value="Настроение готово сделано на костылях (без join, просто с idUser)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Настроение готово сделано на костылях (без join, просто с idUser)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
