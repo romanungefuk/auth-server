@@ -23,43 +23,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08_[Default_Changelist]/ChangePasswordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backend-equp-prod.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/backend-equp-prod.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/backend-equp-prod.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/backend-equp-prod.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/ServerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/ServerConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/change_password_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/change_password_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/password_changed_successfully.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/password_changed_successfully.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.equp.back.backend.BackendApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.equp.back.backend.BackendApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.equp.back.backend.BackendApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.equp.back.backend.BackendApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MailConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MailConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/MoodService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/service/MoodService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseLocalColorSettings">
-    <colors>
-      <entry key="schema_equp/PostgreSQL-7801/05127448-3fb1-4349-babf-629c646325ee:SCHEMA" value="Violet" />
-    </colors>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -72,17 +55,10 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="romanungefuk" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Users\Pavel\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1isJAc5p3wQQo4HNPdx6svrrov6" />
   <component name="ProjectViewState">
@@ -101,7 +77,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../july-market" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -116,14 +92,14 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Java\EQup\rep2810\src\main\resources\templates" />
-      <recent name="D:\Java\EQup\rep2810\src\main\webapp\WEB-INF\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hotli\Documents\EQup\equp-backend\src\main\resources" />
       <recent name="D:\Java\EQup\rep2810\src\main\resources" />
       <recent name="D:\Java\EQup\EQup_back\src\main\java\com\equp\back\backend\email" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\EQup\rep2810\src\main\resources\templates" />
+      <recent name="D:\Java\EQup\rep2810\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BackendApplication">
@@ -149,17 +125,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -217,6 +182,22 @@
       <workItem from="1604613422032" duration="4246000" />
       <workItem from="1604769691871" duration="14047000" />
       <workItem from="1607011029266" duration="1112000" />
+      <workItem from="1607216013901" duration="184000" />
+      <workItem from="1607216252004" duration="15000" />
+      <workItem from="1607234115511" duration="3558000" />
+      <workItem from="1607594901351" duration="6978000" />
+      <workItem from="1607615375233" duration="2746000" />
+      <workItem from="1607975203553" duration="9725000" />
+      <workItem from="1608049484304" duration="14416000" />
+      <workItem from="1608113739318" duration="624000" />
+      <workItem from="1608224032870" duration="4012000" />
+      <workItem from="1608455611652" duration="1395000" />
+      <workItem from="1608488599947" duration="1663000" />
+      <workItem from="1608645056028" duration="12535000" />
+      <workItem from="1608666665488" duration="25305000" />
+      <workItem from="1608830457933" duration="5613000" />
+      <workItem from="1609074643252" duration="849000" />
+      <workItem from="1610384569943" duration="1375000" />
     </task>
     <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
       <created>1604488797266</created>
@@ -253,7 +234,49 @@
       <option name="project" value="LOCAL" />
       <updated>1604578736902</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="создал mood и его метод по записи добавили инициализацию схемы">
+      <created>1607617936334</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607617936334</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Обновил запись настроения">
+      <created>1607982530991</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607982530991</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Допавил получения настроения - нужно смотреть через отладку">
+      <created>1607984914729</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607984914729</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Доделал обновление настроения. не могу запустить полученияе настроения">
+      <created>1608064367803</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608064367803</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Почти готово, но не сохраняет id пользователя (((">
+      <created>1608670389414</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608670389414</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Настроение готово сделано на костылях (без join, просто с idUser)">
+      <created>1608834872597</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608834872597</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,173 +299,26 @@
     <MESSAGE value="обновил модель Добавил StartLocation" />
     <MESSAGE value="Добавлен https ри помощи сертификата от letsencrypt.&#10;Защещенные запросы идут на порт 8443. Если запрос идет на порт 8080 по http, то добавлен редирект на 8443. Сертификат получилось сгенерировать только на домен www.eq-up.ru. На eq-up.ru почему-то айпишник не прописан, если потребуется, то надо будет разбираться." />
     <MESSAGE value="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала." />
-    <option name="LAST_COMMIT_MESSAGE" value="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала." />
+    <MESSAGE value="создал mood и его метод по записи добавили инициализацию схемы" />
+    <MESSAGE value="Обновил запись настроения" />
+    <MESSAGE value="Допавил получения настроения - нужно смотреть через отладку" />
+    <MESSAGE value="Доделал обновление настроения. не могу запустить полученияе настроения" />
+    <MESSAGE value="Почти готово, но не сохраняет id пользователя (((" />
+    <MESSAGE value="Настроение готово сделано на костылях (без join, просто с idUser)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Настроение готово сделано на костылях (без join, просто с idUser)" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="859" y="411" key="#Assign_Data_Sources" timestamp="1602948858425">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="859" y="411" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1602948858425" />
-    <state x="586" y="198" key="#Inspections" timestamp="1602953372289">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1602953372289" />
-    <state x="440" y="94" key="#Project_Structure" timestamp="1602977848075">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1602977848075" />
-    <state x="349" y="361" key="#SQL_Dialects" timestamp="1602940000641">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="349" y="361" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1602940000641" />
-    <state x="536" y="165" key="#SSH_Configurations" timestamp="1602939424238">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="536" y="165" key="#SSH_Configurations/0.0.1920.1040@0.0.1920.1040" timestamp="1602939424238" />
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604505433041">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604505433041" />
-    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602943985706">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602943985706" />
-    <state x="765" y="8" width="335" height="1032" key="#com.intellij.ide.util.MemberChooser" timestamp="1604510807286">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="8" width="335" height="1032" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604510807286" />
-    <state x="743" y="389" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604418459215">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="743" y="389" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1604418459215" />
-    <state x="257" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604511367591">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="257" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604511367591" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604043858194">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604043858194" />
-    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1604614570178">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1536.824@0.0.1536.824" timestamp="1604614570178" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602939419673">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602939419673" />
-    <state width="1877" height="265" key="GridCell.Tab.0.bottom" timestamp="1607011859278">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604616290001" />
-    <state width="1877" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607011859278" />
-    <state width="1877" height="265" key="GridCell.Tab.0.center" timestamp="1607011859278">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604616290001" />
-    <state width="1877" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607011859278" />
-    <state width="1877" height="265" key="GridCell.Tab.0.left" timestamp="1607011859278">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604616290001" />
-    <state width="1877" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607011859278" />
-    <state width="1877" height="265" key="GridCell.Tab.0.right" timestamp="1607011859278">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604616290001" />
-    <state width="1877" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607011859278" />
-    <state width="1877" height="265" key="GridCell.Tab.1.bottom" timestamp="1607011859279">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604614317706" />
-    <state width="1877" height="265" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607011859279" />
-    <state width="1877" height="265" key="GridCell.Tab.1.center" timestamp="1607011859278">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1604614317705" />
-    <state width="1877" height="265" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607011859278" />
-    <state width="1877" height="265" key="GridCell.Tab.1.left" timestamp="1607011859278">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1604614317705" />
-    <state width="1877" height="265" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607011859278" />
-    <state width="1877" height="265" key="GridCell.Tab.1.right" timestamp="1607011859279">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1604614317705" />
-    <state width="1877" height="265" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607011859279" />
-    <state width="1877" height="354" key="GridCell.Tab.2.bottom" timestamp="1604511818894">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="354" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604511818894" />
-    <state width="1877" height="354" key="GridCell.Tab.2.center" timestamp="1604511818893">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="354" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604511818893" />
-    <state width="1877" height="354" key="GridCell.Tab.2.left" timestamp="1604511818893">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="354" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604511818893" />
-    <state width="1877" height="354" key="GridCell.Tab.2.right" timestamp="1604511818893">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="354" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604511818893" />
-    <state width="262" height="471" key="HiddenNamespacesPopup" timestamp="1604421416692">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="262" height="471" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1604421416692" />
-    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1602979038149">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602979038149" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1604503344199">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604503344199" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1604578750961">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604578750961" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604513870594" />
-    <state x="772" y="403" width="376" height="320" key="com.intellij.database.actions.DdlActions$CommentOnObjectAction$1" timestamp="1604420902193">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="772" y="403" width="376" height="320" key="com.intellij.database.actions.DdlActions$CommentOnObjectAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1604420902193" />
-    <state x="858" y="380" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1602939673818">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="858" y="380" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1920.1040@0.0.1920.1040" timestamp="1602939673818" />
-    <state x="830" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604511945707">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="830" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1604511945707" />
-    <state x="769" y="305" key="com.intellij.database.actions.DdlActions$ModifyObject$1" timestamp="1604420919546">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="769" y="305" key="com.intellij.database.actions.DdlActions$ModifyObject$1/0.0.1920.1040@0.0.1920.1040" timestamp="1604420919546" />
-    <state x="295" y="191" width="688" height="664" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604505267321">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="295" y="191" width="688" height="664" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604505267321" />
-    <state x="565" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604070535633">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="565" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604070535633" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604537408786">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1604537408786" />
-    <state x="736" y="278" key="refactoring.ChangeSignatureDialog" timestamp="1604070490878">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="736" y="278" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604070490878" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1604825935369">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604825935369" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604509576638">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604509576638" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/MoodController.java</url>
+          <line>27</line>
+          <properties class="com.equp.back.backend.controller.MoodController" method="setMood">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

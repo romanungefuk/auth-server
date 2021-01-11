@@ -1,19 +1,12 @@
 package com.equp.back.backend.service.impl;
 
-import com.equp.back.backend.exception.UserNotFound;
-import com.equp.back.backend.model.Experience;
 import com.equp.back.backend.model.User;
 import com.equp.back.backend.repository.UserRepository;
 import com.equp.back.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 public class UserServiceImpl implements UserService {

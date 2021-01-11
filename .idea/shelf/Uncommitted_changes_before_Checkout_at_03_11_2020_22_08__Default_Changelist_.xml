@@ -1,9 +1,0 @@
-<changelist name="Uncommitted_changes_before_Checkout_at_03_11_2020_22_08_[Default_Changelist]" date="1604430534967" recycled="true" deleted="true">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08_[Default_Changelist]/shelved.patch" />
-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 03.11.2020 22:08 [Default Changelist]" />
-  <binary>
-    <option name="BEFORE_PATH" value="target/classes/com/equp/back/backend/controller/ChangePasswordController.class" />
-    <option name="AFTER_PATH" value="target/classes/com/equp/back/backend/controller/ChangePasswordController.class" />
-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2020_22_08_[Default_Changelist]/ChangePasswordController.class" />
-  </binary>
-</changelist>
