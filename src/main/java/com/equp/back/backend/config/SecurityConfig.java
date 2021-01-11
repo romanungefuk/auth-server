@@ -28,6 +28,7 @@ private final JwtTokenProvider jwtTokenProvider;
     private static final String ADMIN_ENDPOINT = "/api/v1/admin/**";
     private static final String LOGIN_ENDPOINT = "/api/v1/auth";
     private static final String SIGNUP_ENDPOINT = "/api/v1/user/signup";
+    private static final String UPDATEBYEMAIL_ENDPOINT = "/api/v1/user/update-by-mail";
     private static final String USER_ENDPOINT = "/api/v1/user**";
 
     @Autowired
@@ -51,6 +52,7 @@ private final JwtTokenProvider jwtTokenProvider;
                 .authorizeRequests()
                 .antMatchers(LOGIN_ENDPOINT).permitAll()
                 .antMatchers(SIGNUP_ENDPOINT).permitAll()
+                .antMatchers(UPDATEBYEMAIL_ENDPOINT).permitAll()
                 //.antMatchers(ADMIN_ENDPOINT).hasRole("ADMIN")
                 .antMatchers(USER_ENDPOINT).hasRole("USER")
                 .anyRequest().authenticated()

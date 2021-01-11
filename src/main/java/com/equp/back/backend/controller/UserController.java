@@ -26,7 +26,7 @@ import java.util.Date;
 
 
 @RestController
-@RequestMapping(value ="/api/v1/user")
+@RequestMapping(value = "/api/v1/user")
 @Slf4j
 public class UserController {
 
@@ -37,7 +37,6 @@ public class UserController {
     private final JavaMailSender emailSender;
     private final RoleRepository roleRepository;
     private final JwtTokenProvider jwtTokenProvider;
-    JWT token = new JWT(); // временный токен
 
 
     @Autowired
@@ -76,8 +75,8 @@ public class UserController {
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.PRECONDITION_FAILED);
         } else {
             String encryptedPassword = jwtTokenProvider.passwordEncoder().encode(password);
-            log.info("is password valid "+ new BCryptPasswordEncoder().matches(password,encryptedPassword));
-            log.info("correctPassword "+encryptedPassword);
+            log.info("is password valid " + new BCryptPasswordEncoder().matches(password, encryptedPassword));
+            log.info("correctPassword " + encryptedPassword);
             User user = new User(username, email, password);
             user.setFirstName(username);
             user.setLastName(username);
@@ -116,32 +115,31 @@ public class UserController {
      * @return
      */
 
-    @PostMapping(value = "/api/v1/update-by-app")
+    @PostMapping(value = "/update-by-app")
     public ResponseEntity<?> userUpdate(@RequestParam(value = "id", defaultValue = "-1") Long id,
-                                        @RequestParam(value = "token", defaultValue = "-1") String token,
                                         @RequestParam(value = "newPassword", defaultValue = "-1") String newPassword) {
 
         JSONObject responseObject = new JSONObject();
         Experience experience = experienceService.findByUserId(id);
         TestResult testResult = testresultService.findByUserId(id);
-        User user = new User();
+        User user = userService.findById(id);
 
-        if (experience == null || user == null || testResult == null || !token.equals(this.token.getToken())) {
+        if (experience == null || user == null || testResult == null) {
             responseObject.put("codeResponse", 404);
-            responseObject.put("message", "Запись о пользователе не найдена, или не корректный токен, или не корректный запрос");
+            responseObject.put("message", "Запись о пользователе не найдена или не корректный запрос");
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
 
         } else
-
             user.setEmail(userService.findById(id).getEmail());
-            user.setName(userService.findById(id).getName());
-
-        userService.update(userService.findById(id), newPassword);
+        user.setName(userService.findById(id).getName());
+        String newToken = jwtTokenProvider.createToken(userService.findById(id).getEmail(), user.getRoles());
+        String encryptedPassword = jwtTokenProvider.passwordEncoder().encode(newPassword);
+        userService.update(userService.findById(id), encryptedPassword);
         {
 
             responseObject.put("id", id);
-            responseObject.put("token", token);
+            responseObject.put("token", newToken);
             responseObject.put("message", "Пароль обновлен");
             responseObject.put("codeResponse", 302);
             responseObject.put("user", user);
@@ -156,37 +154,36 @@ public class UserController {
 
     /**
      * Обновление имени пользователя в приложении
-     * @param id идентификатор пользователя
-     * @param token токен
+     *
+     * @param id      идентификатор пользователя
      * @param newName новое имя пользователя
      * @return возвращает пользователя, его опыт и его результаты тестов
      */
-    @PostMapping(value = "/api/v1/update-by-app-name")
+    @PostMapping(value = "/update-by-app-name")
     public ResponseEntity<?> userNameUpdate(@RequestParam(value = "id", defaultValue = "-1") Long id,
-                                            @RequestParam(value = "token", defaultValue = "-1") String token,
                                             @RequestParam(value = "newName", defaultValue = "-1") String newName) {
         JSONObject responseObject = new JSONObject();
         Experience experience = experienceService.findByUserId(id);
         TestResult testResult = testresultService.findByUserId(id);
-        User user = new User();
-        if (experience == null || user == null || testResult == null || !token.equals(this.token.getToken())) {
+        User user = userService.findById(id);
+        if (experience == null || user == null || testResult == null) {
             responseObject.put("codeResponse", 404);
-            responseObject.put("message", "Запись о пользователе не найдена, или не корректный токен, или не корректный запрос");
+            responseObject.put("message", "Запись о пользователе не найдена или не корректный запрос");
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
 
         } else {
-            user.setEmail(userService.findById(id).getEmail());
-            userService.updateName(userService.findById(id), newName);
-            user.setName(userService.findById(id).getName());
-                responseObject.put("id", id);
-                responseObject.put("token", token);
-                responseObject.put("message", "Имя поьзователя обновлено");
-                responseObject.put("codeResponse", 302);
-                responseObject.put("user", user);
-                responseObject.put("experience", experience);
-                responseObject.put("testResult", testResult);
-                return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
+            String newToken = jwtTokenProvider.createToken(userService.findById(id).getEmail(), user.getRoles());
+            userService.updateName(user, newName);
+            responseObject.put("id", id);
+            responseObject.put("token", newToken);
+            responseObject.put("message", "Имя поьзователя обновлено");
+            responseObject.put("codeResponse", 302);
+            responseObject.put("user", user);
+            responseObject.put("experience", experience);
+            responseObject.put("testResult", testResult);
+            System.out.println(responseObject);
+            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
         }
     }
 
@@ -198,7 +195,7 @@ public class UserController {
      * @return
      * @throws MessagingException
      */
-    @PostMapping(value = "/api/v1/update-by-mail")
+    @PostMapping(value = "/update-by-mail")
     public ResponseEntity<?> updateByEmail(@RequestParam(name = "email") String email) throws MessagingException {
         JSONObject responseObject = new JSONObject();
 
@@ -271,19 +268,15 @@ public class UserController {
      * удаление пользователя
      *
      * @param id
-     * @param token
      * @return
      */
-    @DeleteMapping(value = "/api/v1/delete-user")
-    public ResponseEntity<?> deleteUser(@RequestParam(value = "id", defaultValue = "-1") Long id,
-                                        @RequestParam(value = "token", defaultValue = "-1") String token) {
+    @DeleteMapping(value = "/delete-user")
+    public ResponseEntity<?> deleteUser(@RequestParam(value = "id", defaultValue = "-1") Long id) {
         JSONObject responseObject = new JSONObject();
-
         User user = userService.findById(id);
-        System.err.println("token = " + token.equals(this.token.getToken()));
-        if (userService.findById(id) == null || !token.equals(this.token.getToken())) {
+        if (user == null) {
             responseObject.put("codeResponse", 404);
-            responseObject.put("message", "Запись о пользователе не найдена или не корректный токен");
+            responseObject.put("message", "Запись о пользователе не найдена");
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
 
@@ -302,12 +295,10 @@ public class UserController {
      * Обновление записи пользователя
      *
      * @param id
-     * @param token
      * @return
      */
-    @PostMapping(value = "/api/v1/user-update")
+    @PostMapping(value = "/user-update")
     public ResponseEntity<?> userUpdate(@RequestParam(value = "id", defaultValue = "-1") Long id,
-                                        @RequestParam(value = "token", defaultValue = "-1") String token,
                                         @RequestParam(value = "experienceStartLocation", defaultValue = "-1") double experienceStartLocation,
                                         @RequestParam(value = "experienceMindfulness", defaultValue = "-1") double experienceMindfulness,
                                         @RequestParam(value = "experienceAttitudes", defaultValue = "-1") double experienceAttitudes,
@@ -322,11 +313,11 @@ public class UserController {
         JSONObject responseObject = new JSONObject();
         Experience experience = experienceService.findByUserId(id);
         TestResult testResult = testresultService.findByUserId(id);
-        User user = new User();
+        User user = userService.findById(id);
 
-        if (experience == null || user == null || testResult == null || !token.equals(this.token.getToken())) {
+        if (experience == null || user == null || testResult == null) {
             responseObject.put("codeResponse", 404);
-            responseObject.put("message", "Запись о пользователе не найдена или не корректный токен");
+            responseObject.put("message", "Запись о пользователе не найдена");
             log.info(responseObject.toString());
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
 
@@ -368,14 +359,14 @@ public class UserController {
             if (testResultEmpathy > testResult.getEmpathy()) {
                 testResult.setEmpathy(testResultEmpathy);
             }
-
+            String newToken = jwtTokenProvider.createToken(userService.findById(id).getEmail(), user.getRoles());
             experienceService.update(experience);
             log.info(experience.toString());
             testresultService.update(testResult);
             log.info(testResult.toString());
             log.info(user.toString());
             responseObject.put("id", id);
-            responseObject.put("token", token);
+            responseObject.put("token", newToken);
             responseObject.put("message", "данные пользователя обновлены");
             responseObject.put("codeResponse", 302);
             responseObject.put("user", user);

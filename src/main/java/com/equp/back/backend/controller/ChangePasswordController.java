@@ -1,6 +1,7 @@
 package com.equp.back.backend.controller;
 
 import com.equp.back.backend.model.User;
+import com.equp.back.backend.security.jwt.JwtTokenProvider;
 import com.equp.back.backend.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +22,14 @@ public class ChangePasswordController {
 
     private final UserService userService;
     private final JavaMailSender emailSender;
+    private final JwtTokenProvider jwtTokenProvider;
 
 
     @Autowired
-    public ChangePasswordController(UserService userService, JavaMailSender emailSender) {
+    public ChangePasswordController(UserService userService, JavaMailSender emailSender, JwtTokenProvider jwtTokenProvider) {
         this.userService = userService;
         this.emailSender = emailSender;
+        this.jwtTokenProvider = jwtTokenProvider;
     }
 
     @GetMapping("/")
@@ -69,8 +72,8 @@ public class ChangePasswordController {
         }
 
         else if (password.equals(passwordRepeat)){
-
-            userService.update(user,password);
+            String encryptedPassword = jwtTokenProvider.passwordEncoder().encode(password);
+            userService.update(user,encryptedPassword);
 
             MimeMessage message = emailSender.createMimeMessage();
             boolean multipart = true;
