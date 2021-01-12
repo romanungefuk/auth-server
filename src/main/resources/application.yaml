@@ -24,7 +24,6 @@ spring:
     url: jdbc:postgresql://185.255.133.253:5432/db_equp
    # url: jdbc:postgresql://185.255.133.253:5432/PostgreSQL-7801
     #url: jdbc:postgresql://localhost:5432/PostgreSQL-7801
-    # Проверка работы с private-гитом
     username: equp
     password: 5aKfpGNNswxHXmsg
     driver-class-name: org.postgresql.Driver
