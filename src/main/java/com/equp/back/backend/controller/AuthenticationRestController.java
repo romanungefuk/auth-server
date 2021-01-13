@@ -54,7 +54,7 @@ public class AuthenticationRestController {
      * @param password
      * @return
      */
-    @PostMapping("/api/v1/auth")
+    @GetMapping("/api/v1/auth")
     public ResponseEntity auth(@RequestParam(name = "email") String email,
                                   @RequestParam(name = "password") String password) {
 

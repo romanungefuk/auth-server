@@ -1,7 +1,6 @@
 package com.equp.back.backend.controller;
 
 import com.equp.back.backend.model.Experience;
-import com.equp.back.backend.model.JWT;
 import com.equp.back.backend.model.TestResult;
 import com.equp.back.backend.model.User;
 import com.equp.back.backend.repository.RoleRepository;
@@ -241,7 +240,7 @@ public class UserController {
                     "если же подобные письма будут продолжать приходить, обратитесь в нашу поддерку." +
                     "</h4>" +
 //                    "<a href=\"http://localhost:8443/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">Сменить пароль</a>" +
-                    "<a href=\"http://www.eq-up.ru:8443/password_change?email=" + user.getEmail() + "&name=" + user.getName() + "&id=" + user.getId() + "\">Сменить пароль</a>" +
+                    "<a href=\"https://www.eq-up.ru:8443/password_change?email=" + user.getEmail() + "&name=" + user.getName() + "&id=" + user.getId() + "\">Сменить пароль</a>" +
                     "</br>" +
                     "</br>" + "</br>" +
                     "</br>" +
