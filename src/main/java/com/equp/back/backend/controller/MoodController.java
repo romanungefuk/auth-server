@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping(value = "/api/v1/mood")
 @Slf4j
 public class MoodController {
 
@@ -24,7 +25,7 @@ public class MoodController {
         this.moodService = moodService;
     }
 
-    @PostMapping(value = "/api/v1/setmood")
+    @PostMapping
     public ResponseEntity<?> setMood(@RequestBody List<Mood> moods){
 
 
@@ -41,9 +42,8 @@ public class MoodController {
 
     }
 
-    @GetMapping(value = "/api/v1/getmood")
-    public ResponseEntity<?> getMood(@RequestParam(value = "id", defaultValue = "-1") Long id,
-                                     @RequestParam(value = "token", defaultValue = "-1") String token){
+    @GetMapping
+    public ResponseEntity<?> getMood(@RequestParam(value = "id", defaultValue = "-1") Long id){
 
 
 //        List<Mood> moodList = null;
