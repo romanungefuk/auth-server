@@ -22,13 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MyConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/ServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +193,7 @@
       <workItem from="1607011029266" duration="1112000" />
       <workItem from="1607208844438" duration="22982000" />
       <workItem from="1610821323998" duration="2272000" />
-      <workItem from="1610829760034" duration="415000" />
+      <workItem from="1610829760034" duration="725000" />
     </task>
     <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
       <created>1604488797266</created>
@@ -236,7 +230,28 @@
       <option name="project" value="LOCAL" />
       <updated>1604578736902</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
+      <created>1610830371889</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610830371889</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
+      <created>1610830417222</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610830417222</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
+      <created>1610830481396</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610830481396</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
