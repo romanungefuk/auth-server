@@ -23,24 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/images/Check-mark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MailConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/MyConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EQup_back.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EQup_back.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/initDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/change_password_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/change_password_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/password_changed_successfully.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/password_changed_successfully.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MailConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MailConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MyConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/MyConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/initDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/change_password_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/change_password_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/password_changed_successfully.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/password_changed_successfully.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +87,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -111,11 +104,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hotli\Documents\EQup\equp-backend\src\main\resources" />
-      <recent name="D:\Java\EQup\rep2810\src\main\resources" />
-      <recent name="D:\Java\EQup\EQup_back\src\main\java\com\equp\back\backend\email" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="D:\Java\EQup\rep2810\src\main\resources\templates" />
       <recent name="D:\Java\EQup\rep2810\src\main\webapp\WEB-INF\views" />
     </key>
@@ -216,7 +214,7 @@
       <workItem from="1607208844438" duration="22982000" />
       <workItem from="1610821323998" duration="2272000" />
       <workItem from="1610829760034" duration="16918000" />
-      <workItem from="1610886299401" duration="2805000" />
+      <workItem from="1610886299401" duration="11845000" />
     </task>
     <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
       <created>1604488797266</created>
@@ -288,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610830623749</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Обновил работу почты (конфигурация для локального ПК)">
+      <created>1610889738957</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1610889738957</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,17 +316,7 @@
     <MESSAGE value="обновил модель Добавил StartLocation" />
     <MESSAGE value="Добавлен https ри помощи сертификата от letsencrypt.&#10;Защещенные запросы идут на порт 8443. Если запрос идет на порт 8080 по http, то добавлен редирект на 8443. Сертификат получилось сгенерировать только на домен www.eq-up.ru. На eq-up.ru почему-то айпишник не прописан, если потребуется, то надо будет разбираться." />
     <MESSAGE value="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала." />
-    <option name="LAST_COMMIT_MESSAGE" value="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/ChangePasswordController.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Обновил работу почты (конфигурация для локального ПК)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновил работу почты (конфигурация для локального ПК)" />
   </component>
 </project>
