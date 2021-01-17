@@ -253,12 +253,14 @@ public class UserController {
 
 
             helper.setText(htmlMsg);
+            helper.setFrom("no-reply@eq-up.ru");
             helper.setTo(user.getEmail());
             helper.setSubject("Изменение пароля от EQup");
             this.emailSender.send(message);
 
 
         }
+
         return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
 
     }

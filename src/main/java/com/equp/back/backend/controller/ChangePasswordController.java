@@ -92,6 +92,8 @@ public class ChangePasswordController {
             message.setContent(htmlMsg, "text/html; charset=utf-8");
             helper.setTo(user.getEmail());
             helper.setSubject("Password was changed successfully");
+            helper.setFrom("no-reply@eq-up.ru");
+
             this.emailSender.send(message);
 
             return "password_changed_successfully";

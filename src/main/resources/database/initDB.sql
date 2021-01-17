@@ -60,3 +60,9 @@ CREATE TABLE IF NOT EXISTS moods_user
     mood_id int not null,
     user_id int not null
 );
+
+CREATE TABLE IF NOT EXISTS users_paswords_status
+(
+    user_id int not null,
+    status VARCHAR(100) NOT NULL
+);

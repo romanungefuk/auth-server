@@ -43,8 +43,11 @@ spring:
   jpa:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+
 jwt:
   token:
     secret: jwttokenequp
     #expired: 1814400000 # 3 недели
     expired: 120000
+
+
