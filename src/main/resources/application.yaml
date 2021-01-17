@@ -48,6 +48,6 @@ jwt:
   token:
     secret: jwttokenequp
     #expired: 1814400000 # 3 недели
-    expired: 120000
+    expired: 1814400000
 
 
