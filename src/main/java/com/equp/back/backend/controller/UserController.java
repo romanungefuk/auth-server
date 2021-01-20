@@ -57,6 +57,11 @@ public class UserController {
      * @param password
      * @return
      */
+
+
+
+
+
     @PostMapping(value = "/signup")
     public ResponseEntity<?> signup(@RequestParam(name = "username") String username,
                                     @RequestParam(name = "email") String email,
@@ -219,7 +224,6 @@ public class UserController {
                     "ans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0=" +
                     ";Margin:0\">" +
                     "<head>" +
-
                     "<meta http-equiv=3D\"Content-Security-Policy\" content=3D\"script-src 'non=" +
                     "e'; connect-src 'none'; object-src 'none'; form-action 'none';\">" +
                     "    <meta charset=3D\"UTF-8\">\n" +
@@ -228,25 +232,48 @@ public class UserController {
                     "    <meta name=3D\"x-apple-disable-message-reformatting\">\n" +
                     "    <meta http-equiv=3D\"X-UA-Compatible\" content=3D\"IE=3Dedge\">\n" +
                     "    <meta content=3D\"telephone=3Dno\" name=3D\"format-detection\">" +
+                    "<style type=\"text/css\">"+
+
+                    "body {"+
+                    "font-family: Circle, sans-serif;"+
+                    "font-size: 80%"+
+                    "}"+
+
+                    "h2{"+
+                    "color: #4572CC;"+
+                    "font-size: 150%"+
+
+                    "}"+
+
+                    "</style>"+
 
                     "<title>Смена пароля от приложения EQup</title>" +
                     "</head>" +
                     "<body>" +
-                    "<h4>Здравствуйте, " + user.getName() + "!\n" +
-                    "Вы получили это письмо потому, что Вы (либо кто-то, выдающий себя за Вас) " +
+                    "<h2>Восстановление пароля для EQup</h2>"+
+                    "<h2> </h2>"+
+
+                    "<h4>Здравствуйте, " + user.getFirstName() + "!</h4> \n" +
+                    "</br>\n"+
+                    "<h4>Вы получили это письмо потому, что Вы (либо кто-то, выдающий себя за Вас) " +
+                    "</br>\n"+
                     "при попытке входа в учетную запись EQup отправил запрос на изменение пароля. " +
                     "</h4>" +
-                    "<h4>Если Вы этого не делали, то не обращайте внимания на это письмо, " +
-                    "если же подобные письма будут продолжать приходить, обратитесь в нашу поддерку." +
+                    "</br>\n"+
+                    "<h4>Если Вы этого не делали, то не обращайте внимания на это письмо. " +
+                    "</br>\n"+
+                    "В случае повторного получения подобных писем - обратитесь в нашу поддерку " +
+                    "</br>\n"+
+                    "по адресу support@eq-up.ru" +
                     "</h4>" +
-//                    "<a href=\"http://localhost:8443/password_change?email="+user.getEmail()+"&name="+user.getName()+"&id="+user.getId()+"\">Сменить пароль</a>" +
-                    "<a href=\"https://www.eq-up.ru:8443/password_change?email=" + user.getEmail() + "&name=" + user.getName() + "&id=" + user.getId() + "\">Сменить пароль</a>" +
+
+                    "<h4><a href=\"https://www.eq-up.ru:8443/password_change?email=" + user.getEmail() +
+                    "&name=" + user.getName() + "&id=" + user.getId() + "\">Сменить пароль</a></h4>" +
                     "</br>" +
-                    "</br>" + "</br>" +
                     "</br>" +
                     "<h4>-------------------------</h4>" +
                     "</br>" +
-                    "<h4>С уважением команда EQup</h4>" +
+                    "<h4>Ваша команда EQup</h4>" +
                     "</body>" +
                     "</html>";
             message.setContent(htmlMsg, "text/html; charset=utf-8");
@@ -378,4 +405,63 @@ public class UserController {
         return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
 
     }
+
+    @PutMapping(value = "/")
+    public ResponseEntity<?> inits() {
+
+        int count = 10000000;
+
+        for (int i = 0; i < count; i++) {
+
+            String username = "name"+i;
+            String email = username+"@mail.ru";
+            String password = "12345";
+
+            JSONObject responseObject = new JSONObject();
+
+
+            if (userService.findByEmail(email) != null) {
+                responseObject.put("codeResponse", 412);
+                responseObject.put("message", "Пользователь с email: " + email + " уже существует");
+                System.out.print(responseObject.toString());
+                log.info(responseObject.toString());
+                return new ResponseEntity<>(responseObject.toMap(), HttpStatus.PRECONDITION_FAILED);
+            } else {
+                String encryptedPassword = jwtTokenProvider.passwordEncoder().encode(password);
+                log.info("is password valid " + new BCryptPasswordEncoder().matches(password, encryptedPassword));
+                log.info("correctPassword " + encryptedPassword);
+                User user = new User(username, email, password);
+                user.setFirstName(username);
+                user.setLastName(username);
+                user.setRoles(Arrays.asList(roleRepository.findByName("ROLE_USER")));
+                Date date = new Date(System.currentTimeMillis());
+                user.setCreated(date);
+                user.setUpdated(date);
+                userService.create(user);
+                log.info(responseObject.toString());
+
+                Experience tempExperience = new Experience(user.getId());
+                experienceService.create(tempExperience);
+                log.info("опыт для " + user.getName() + " создан");
+
+                TestResult testresult = new TestResult(user.getId());
+                testresultService.create(testresult);
+                log.info("результат теста для" + user.getName() + " создан");
+
+                String token = jwtTokenProvider.createToken(email, user.getRoles());
+
+                responseObject.put("id", user.getId());
+                responseObject.put("token", token);
+                responseObject.put("message", "пользователь с email " + email + " создан");
+                responseObject.put("codeResponse", 201);
+                responseObject.put("user", user);
+                responseObject.put("experience", experienceService.findByUserId(user.getId()));
+                responseObject.put("testResult", testresultService.findByUserId(user.getId()));
+                System.out.println(username + " create");
+            }
+        }
+        return new ResponseEntity<>(count, HttpStatus.CREATED);
+    }
+
+
 }

@@ -57,6 +57,7 @@ public class ChangePasswordController {
 
         User user = userService.findById(id);
 
+
         if (password.length() < 4 || passwordRepeat.length() < 4){
             model.addAttribute("email", email);
             model.addAttribute("name", name);
