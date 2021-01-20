@@ -7,10 +7,10 @@ INSERT INTO  users VALUES
 (1, 'user', 'Default newUser','Default newUser','user@mail.ru','$2a$04$sweeYfA1IOmERGq0mXFjXeY7ksEK.7h0AHgj0yM84XSOICobdw9nC', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
 (2, 'pamishenko', 'Pavel','Mischenko','pamishenko@gmail.com','$2a$04$TOWdB3.7NVUhKNPS/LE6ze6OBG.slIGlVTlaa0iQL0ZhfpB2BUm/q', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
 (3, 'olduser', 'Default oldUser','Default oldUser','olduser@mail.ru','$2a$04$YHvzd5R5Ioxnsbmhp8CjA..lcPcv28fnRbzIFcLafNvQ11RdIwJdO', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
-(4, 'zlatanik', 'Zlata','Perepelits','Zlatanik2008@rambler.ru','$2a$04$kvGYn5.3EAVnXhKtQx4a6.YKUlNZATd6FZaybDYJ7/nPo6WNFSSTC', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
-(5, 'uizemenkova', 'Julia','Zemenkova','Uizemenkova@gmail.com','$2a$04$S4qAaobBtOldutDsde1MDeRGVEXcNmPKaWSBt9QVw.7OJn9Z83hCC', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
-(6, 'jvorobjeva', 'Julia','Vorobjeva','J.vorobjeva@mail.ru','$2a$04$IvfulGd/fwPOtGCrjlkMWOby1ecmjFSCckScGS5Gee7WcoDV8dZnG', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
-(7, 'manimusic', 'Mani','Music','Manimusic@yandex.ru','$2a$04$A2ISF3jbBccMuHkWaTyiLOYrbHfhUQ0wgLmrXRAsJgC8OD8tYZ8wm', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
+(4, 'zlatanik', 'Zlata','Perepelits','zlatanik2008@rambler.ru','$2a$04$kvGYn5.3EAVnXhKtQx4a6.YKUlNZATd6FZaybDYJ7/nPo6WNFSSTC', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
+(5, 'uizemenkova', 'Julia','Zemenkova','uizemenkova@gmail.com','$2a$04$S4qAaobBtOldutDsde1MDeRGVEXcNmPKaWSBt9QVw.7OJn9Z83hCC', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
+(6, 'jvorobjeva', 'Julia','Vorobjeva','j.vorobjeva@mail.ru','$2a$04$IvfulGd/fwPOtGCrjlkMWOby1ecmjFSCckScGS5Gee7WcoDV8dZnG', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
+(7, 'manimusic', 'Mani','Music','manimusic@yandex.ru','$2a$04$A2ISF3jbBccMuHkWaTyiLOYrbHfhUQ0wgLmrXRAsJgC8OD8tYZ8wm', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE'),
 (8, 'romanungefuk', 'Roman','Ungefuk','roman.ungefuk@gmail.com','$2a$04$yrw4nT/LZzRJeiptGHGuKO4rhhb.LTzakr0MayNLrgW.T55iYEdNq', '2020-12-10 00:38:25', '2020-12-10 00:38:31','ACTIVE');
 
 
