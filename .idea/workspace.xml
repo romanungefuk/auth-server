@@ -23,44 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68531c75-5b99-461a-a11c-8013ee463caa" name="Default Changelist" comment="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Rectangle193.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Rectangle193.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Rectangle193.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/images/successfully-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Rectangle193.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Rectangle193.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/change_password_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/images/Check-mark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/images/Rectangle193.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/password_changed_successfully.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/PostgreSQL-7801.eyftww/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c0d62117-46d0-478e-8af6-226847cce07d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EQup_back.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EQup_back.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/ChangePasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/ChangePasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/AuthenticationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/AuthenticationRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/equp/back/backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HLAM/ХЛАМ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/change_password_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/change_password_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/Check-mark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/Check-mark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/password_changed_successfully.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/password_changed_successfully.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HLAM/ХЛАМ" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/ChangePasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/ChangePasswordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/equp/back/backend/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/change_password_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/change_password_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/password_changed_successfully.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/password_changed_successfully.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +219,7 @@
       <workItem from="1610886299401" duration="11845000" />
       <workItem from="1610898852147" duration="928000" />
       <workItem from="1610985920118" duration="28037000" />
-      <workItem from="1611163508121" duration="2411000" />
+      <workItem from="1611163508121" duration="5073000" />
     </task>
     <task id="LOCAL-00001" summary="обновил модель и запрос обновления">
       <created>1604488797266</created>
@@ -330,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610889738957</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="не работет отображение картинок">
+      <created>1611166074269</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611166074269</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +329,7 @@
     <MESSAGE value="Добавлен https ри помощи сертификата от letsencrypt.&#10;Защещенные запросы идут на порт 8443. Если запрос идет на порт 8080 по http, то добавлен редирект на 8443. Сертификат получилось сгенерировать только на домен www.eq-up.ru. На eq-up.ru почему-то айпишник не прописан, если потребуется, то надо будет разбираться." />
     <MESSAGE value="Небольшие правки.В pom.xml удалил зависимость spring security. Она мешала." />
     <MESSAGE value="Обновил работу почты (конфигурация для локального ПК)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновил работу почты (конфигурация для локального ПК)" />
+    <MESSAGE value="не работет отображение картинок" />
+    <option name="LAST_COMMIT_MESSAGE" value="не работет отображение картинок" />
   </component>
 </project>

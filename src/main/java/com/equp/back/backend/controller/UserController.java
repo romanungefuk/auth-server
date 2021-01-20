@@ -71,7 +71,7 @@ public class UserController {
         JSONObject responseObject = new JSONObject();
 
 
-        if (userService.findByEmail(email) != null) {
+        if (userService.findByEmail(email.toLowerCase()) != null) {
             responseObject.put("codeResponse", 412);
             responseObject.put("message", "Пользователь с email: " + email + " уже существует");
             System.out.print(responseObject.toString());
@@ -81,7 +81,7 @@ public class UserController {
             String encryptedPassword = jwtTokenProvider.passwordEncoder().encode(password);
             log.info("is password valid " + new BCryptPasswordEncoder().matches(password, encryptedPassword));
             log.info("correctPassword " + encryptedPassword);
-            User user = new User(username, email, password);
+            User user = new User(username, email.toLowerCase(), password);
             user.setFirstName(username);
             user.setLastName(username);
             user.setRoles(Arrays.asList(roleRepository.findByName("ROLE_USER")));

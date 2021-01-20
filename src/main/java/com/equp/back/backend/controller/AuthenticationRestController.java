@@ -59,7 +59,7 @@ public class AuthenticationRestController {
                                   @RequestParam(name = "password") String password) {
 
             Map<Object, Object> response = new HashMap<>();
-            User user = userService.findByEmail(email);
+            User user = userService.findByEmail(email.toLowerCase());
             boolean isPasswordCorrect = false;
             if(user!=null){
                 isPasswordCorrect = new BCryptPasswordEncoder().matches(password, user.getPassword());
