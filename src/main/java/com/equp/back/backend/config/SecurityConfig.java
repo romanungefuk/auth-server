@@ -15,14 +15,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http
-//                .requiresChannel()
-//                .anyRequest();
-//
-//        http.csrf().disable();
-//    }
 private final JwtTokenProvider jwtTokenProvider;
 
     private static final String ADMIN_ENDPOINT = "/api/v1/admin/**";
@@ -52,6 +44,7 @@ private final JwtTokenProvider jwtTokenProvider;
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
+                .antMatchers("/images/**").permitAll()
                 .antMatchers(LOGIN_ENDPOINT).permitAll()
                 .antMatchers(SIGNUP_ENDPOINT).permitAll()
                 .antMatchers(UPDATEBYEMAIL_ENDPOINT).permitAll()
