@@ -45,6 +45,8 @@ private final JwtTokenProvider jwtTokenProvider;
                 .and()
                 .authorizeRequests()
                 .antMatchers("/images/**").permitAll()
+                .antMatchers("/css/**").permitAll()
+                .antMatchers("/fonts/**").permitAll()
                 .antMatchers(LOGIN_ENDPOINT).permitAll()
                 .antMatchers(SIGNUP_ENDPOINT).permitAll()
                 .antMatchers(UPDATEBYEMAIL_ENDPOINT).permitAll()
