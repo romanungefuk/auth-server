@@ -69,7 +69,7 @@ public class ChangePasswordController {
             model.addAttribute("email", email);
             model.addAttribute("name", name);
             model.addAttribute("id", id);
-            model.addAttribute("message","Пароли не сходятся");
+            model.addAttribute("message","Пароли не совпадают");
         }
 
         else if (password.equals(passwordRepeat)){
@@ -92,7 +92,7 @@ public class ChangePasswordController {
 
             message.setContent(htmlMsg, "text/html; charset=utf-8");
             helper.setTo(user.getEmail());
-            helper.setSubject("Password was changed successfully");
+            helper.setSubject("Пароль был изменен");
             helper.setFrom("no-reply@eq-up.ru");
 
             this.emailSender.send(message);
