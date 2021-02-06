@@ -1,54 +1,20 @@
+spring:
+  profiles:
+    active: mysql
 server:
   port: 8443
-  #port: 8099
   tomcat.uri-encoding: utf-8
-#  # The format used for the keystore. It could be set to JKS in case it is a JKS file
+  # The format used for the keystore. It could be set to JKS in case it is a JKS file
 
-#*********************************************
+  #*********************************************
   ssl:
     key-store-type: PKCS12
     key-store: /var/www/equp/cert/equp.p12
     key-store-password:
-#*********************************************
-
-    # The path to the keystore containing the certificate
-  # The password used to generate the certificate
-#  # The alias mapped to the certificate
- #   key-alias: tomcat
-
-spring:
-  datasource:
-
-#    url: jdbc:postgresql://10.0.0.11:5432/PostgreSQL-7801
-#    url: jdbc:postgresql://185.86.145.179:5432/PostgreSQL-7801          - БД в инфра майл
-    url: jdbc:postgresql://185.255.133.253:5432/db_equp
-   # url: jdbc:postgresql://185.255.133.253:5432/PostgreSQL-7801
-    #url: jdbc:postgresql://localhost:5432/PostgreSQL-7801
-    username: equp
-    password: 5aKfpGNNswxHXmsg
-    driver-class-name: org.postgresql.Driver
-    initialization-mode: ALWAYS
-    schema: classpath*:database/initDB.sql
-    #data: classpath*:database/populateDB.sql
-
-  thymeleaf:
-    cache: false
-    check-template: true
-    check-template-location: true
-    enabled: true
-    classpath: classpath:/templates/
-#    prefix: classpath:resources/templates/
-    suffix: .html
-
-
-  jpa:
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
-
+  #*********************************************
 jwt:
-  token:
-    secret: jwttokenequp
-    #expired: 1814400000 # 3 недели
-    expired: 1814400000
+  secret: SXQnc015U2VjcmV0S2V5MWQ5OFQ3Y2lqaGFzODd5am5iY2l1eTdTM2RhOXs4eWNramhrajM3a2poRmRpOHlxamtoamtraixtamxranpDZGY7ams7al5sa2pmamtnYmV3dWloa2pubCQ7ZmlvaHdlaWhq
+  #expired: 1814400000 # 3 недели
+  expired: 1814400000
 
 
