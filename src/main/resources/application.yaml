@@ -13,8 +13,9 @@ server:
     key-store-password:
   #*********************************************
 jwt:
-  secret: SXQnc015U2VjcmV0S2V5MWQ5OFQ3Y2lqaGFzODd5am5iY2l1eTdTM2RhOXs4eWNramhrajM3a2poRmRpOHlxamtoamtraixtamxranpDZGY7ams7al5sa2pmamtnYmV3dWloa2pubCQ7ZmlvaHdlaWhq
-  #expired: 1814400000 # 3 недели
-  expired: 1814400000
+  token:
+    secret: SXQnc015U2VjcmV0S2V5MWQ5OFQ3Y2lqaGFzODd5am5iY2l1eTdTM2RhOXs4eWNramhrajM3a2poRmRpOHlxamtoamtraixtamxranpDZGY7ams7al5sa2pmamtnYmV3dWloa2pubCQ7ZmlvaHdlaWhq
+    #expired: 1814400000 # 3 недели
+    expired: 1814400000
 
 

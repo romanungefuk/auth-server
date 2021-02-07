@@ -26,8 +26,10 @@ spring:
 
 
   jpa:
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    database:
+      hibernate:
+        ddl-auto: validate
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 
 
 
