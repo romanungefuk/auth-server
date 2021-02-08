@@ -1,8 +1,0 @@
-{
-  "properties": [
-    {
-      "name": "spring.thymeleaf.classpath",
-      "type": "java.lang.String",
-      "description": "Description for spring.thymeleaf.classpath."
-  }
-] }
