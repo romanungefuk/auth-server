@@ -12,8 +12,8 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     initialization-mode: ALWAYS
     #initialization-mode: ALWAYS
-    schema: classpath*:database/initDB.sql
-    data: classpath*:database/populateDB.sql
+    #schema: classpath*:database/initDB.sql
+    #data: classpath*:database/populateDB.sql
 
   thymeleaf:
     cache: false
