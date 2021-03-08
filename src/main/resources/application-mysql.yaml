@@ -4,12 +4,16 @@ spring:
 #    url: jdbc:postgresql://10.0.0.11:5432/PostgreSQL-7801
 #    url: jdbc:postgresql://185.86.145.179:5432/PostgreSQL-7801          - БД в инфра майл
     #url: jdbc:postgresql://185.255.133.253:5432/db_equp
-    url: jdbc:mariadb://127.0.0.1:3306/db_equp
+    #url: jdbc:mariadb://127.0.0.1:3306/db_equp
+    url: jdbc:mysql://127.0.0.1:3306/db_equp
    # url: jdbc:postgresql://185.255.133.253:5432/PostgreSQL-7801
     #url: jdbc:postgresql://localhost:5432/PostgreSQL-7801
-    username: equp
-    password: 5aKfpGNNswxHXmsg
-    driver-class-name: org.mariadb.jdbc.Driver
+    #username: equp
+    #password: 5aKfpGNNswxHXmsg
+    username: root
+    password: sZeTZItYt1EBFy8WCved
+    #driver-class-name: org.mariadb.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     initialization-mode: ALWAYS
     #initialization-mode: ALWAYS
     #schema: classpath*:database/initDB.sql
@@ -28,7 +32,8 @@ spring:
   jpa:
     database:
       hibernate:
-        ddl-auto: validate
+        #ddl-auto: validate
+        ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 
 
