@@ -338,5 +338,31 @@ public class UserController {
         return new ResponseEntity<>(count, HttpStatus.CREATED);
     }
 
+    /**
+     * Получение пользователя по идентификатору
+     * @param id идентификатор пользователя
+     * @return User
+     */
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getUserById(@PathVariable Long id) {
+        JSONObject responseObject = new JSONObject();
+        User user = userService.findById(id);
+        if (user == null) {
+            responseObject.put("codeResponse", 404);
+            responseObject.put("message", "Запись о пользователе с идентификатором " + id + " не найдена.");
+            log.info(responseObject.toString());
+            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
+
+        } else {
+            String newToken = jwtTokenProvider.createToken(userService.findById(id).getEmail(), user.getRoles());
+            responseObject.put("id", id);
+            responseObject.put("token", newToken);
+            responseObject.put("message", "Пользователь найден");
+            responseObject.put("codeResponse", 201);
+            responseObject.put("user", user);
+            System.out.println(responseObject);
+            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
+        }
+    }
 
 }
