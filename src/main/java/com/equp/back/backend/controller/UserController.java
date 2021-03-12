@@ -369,7 +369,7 @@ public class UserController {
      * Обновление подписки пользователя в приложении
      *
      * @param id      идентификатор пользователя
-     * @param subscription код подписки
+     * @param subscriptionValue код подписки
      * @return возвращает пользователя с обновленным полем подписки
      */
     @PostMapping(value = "/subscription")

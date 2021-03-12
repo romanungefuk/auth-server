@@ -5,7 +5,7 @@ spring:
 #    url: jdbc:postgresql://185.86.145.179:5432/PostgreSQL-7801          - БД в инфра майл
     #url: jdbc:postgresql://185.255.133.253:5432/db_equp
     #url: jdbc:mariadb://127.0.0.1:3306/db_equp
-    url: jdbc:mysql://10.0.1.4:3306/SUBD_equp
+    url: jdbc:mysql://10.0.1.4:3306/SUBD_equp?characterEncoding=UTF-8
    # url: jdbc:postgresql://185.255.133.253:5432/PostgreSQL-7801
     #url: jdbc:postgresql://localhost:5432/PostgreSQL-7801
     username: equp
