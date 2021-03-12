@@ -3,8 +3,6 @@ package com.equp.back.backend.controller;
 
 import com.equp.back.backend.model.User;
 import com.equp.back.backend.security.jwt.JwtTokenProvider;
-import com.equp.back.backend.service.ExperienceService;
-import com.equp.back.backend.service.TestresultService;
 import com.equp.back.backend.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,17 +32,11 @@ public class AuthenticationRestController {
 
     private final UserService userService;
 
-    private final ExperienceService experienceService;
-
-    private final TestresultService testresultService;
-
     @Autowired
-    public AuthenticationRestController(AuthenticationManager authenticationManager, JwtTokenProvider jwtTokenProvider, UserService userService, ExperienceService experienceService, TestresultService testresultService) {
+    public AuthenticationRestController(AuthenticationManager authenticationManager, JwtTokenProvider jwtTokenProvider, UserService userService) {
         this.authenticationManager = authenticationManager;
         this.jwtTokenProvider = jwtTokenProvider;
         this.userService = userService;
-        this.experienceService = experienceService;
-        this.testresultService = testresultService;
     }
 
     /**
@@ -83,8 +75,6 @@ public class AuthenticationRestController {
                 response.put("message", "Пользователь найден");
                 response.put("codeResponse", 201);
                 response.put("user", user);
-                response.put("experience", experienceService.findByUserId(user.getId()));
-                response.put("testResult", testresultService.findByUserId(user.getId()));
                 log.info(response.toString());
                 return new ResponseEntity(response, HttpStatus.FOUND);
             }

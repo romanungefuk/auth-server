@@ -1,12 +1,8 @@
 package com.equp.back.backend.controller;
 
-import com.equp.back.backend.model.Experience;
-import com.equp.back.backend.model.TestResult;
 import com.equp.back.backend.model.User;
 import com.equp.back.backend.repository.RoleRepository;
 import com.equp.back.backend.security.jwt.JwtTokenProvider;
-import com.equp.back.backend.service.ExperienceService;
-import com.equp.back.backend.service.TestresultService;
 import com.equp.back.backend.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
@@ -31,18 +27,14 @@ public class UserController {
 
 
     private final UserService userService;
-    private final ExperienceService experienceService;
-    private final TestresultService testresultService;
     private final JavaMailSender emailSender;
     private final RoleRepository roleRepository;
     private final JwtTokenProvider jwtTokenProvider;
 
 
     @Autowired
-    public UserController(UserService userService, ExperienceService experienceService, TestresultService testresultService, JavaMailSender emailSender, RoleRepository roleRepository, JwtTokenProvider jwtTokenProvider) {
+    public UserController(UserService userService, JavaMailSender emailSender, RoleRepository roleRepository, JwtTokenProvider jwtTokenProvider) {
         this.userService = userService;
-        this.experienceService = experienceService;
-        this.testresultService = testresultService;
         this.emailSender = emailSender;
         this.roleRepository = roleRepository;
         this.jwtTokenProvider = jwtTokenProvider;
@@ -91,14 +83,6 @@ public class UserController {
             userService.create(user);
             log.info(responseObject.toString());
 
-            Experience tempExperience = new Experience(user.getId());
-            experienceService.create(tempExperience);
-            log.info("опыт для " + user.getName() + " создан");
-
-            TestResult testresult = new TestResult(user.getId());
-            testresultService.create(testresult);
-            log.info("результат теста для" + user.getName() + " создан");
-
             String token = jwtTokenProvider.createToken(email, user.getRoles());
 
             responseObject.put("id", user.getId());
@@ -106,8 +90,6 @@ public class UserController {
             responseObject.put("message", "пользователь с email " + email + " создан");
             responseObject.put("codeResponse", 201);
             responseObject.put("user", user);
-            responseObject.put("experience", experienceService.findByUserId(user.getId()));
-            responseObject.put("testResult", testresultService.findByUserId(user.getId()));
         }
         return new ResponseEntity<>(responseObject.toMap(), HttpStatus.CREATED);
     }
@@ -124,11 +106,9 @@ public class UserController {
                                         @RequestParam(value = "newPassword", defaultValue = "-1") String newPassword) {
 
         JSONObject responseObject = new JSONObject();
-        Experience experience = experienceService.findByUserId(id);
-        TestResult testResult = testresultService.findByUserId(id);
         User user = userService.findById(id);
 
-        if (experience == null || user == null || testResult == null) {
+        if (user == null) {
             responseObject.put("codeResponse", 404);
             responseObject.put("message", "Запись о пользователе не найдена или не корректный запрос");
             log.info(responseObject.toString());
@@ -147,8 +127,6 @@ public class UserController {
             responseObject.put("message", "Пароль обновлен");
             responseObject.put("codeResponse", 302);
             responseObject.put("user", user);
-            responseObject.put("experience", experience);
-            responseObject.put("testResult", testResult);
             log.info(responseObject.toString());
 
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
@@ -167,10 +145,8 @@ public class UserController {
     public ResponseEntity<?> userNameUpdate(@RequestParam(value = "id", defaultValue = "-1") Long id,
                                             @RequestParam(value = "newName", defaultValue = "-1") String newName) {
         JSONObject responseObject = new JSONObject();
-        Experience experience = experienceService.findByUserId(id);
-        TestResult testResult = testresultService.findByUserId(id);
         User user = userService.findById(id);
-        if (experience == null || user == null || testResult == null) {
+        if (user == null) {
             responseObject.put("codeResponse", 404);
             responseObject.put("message", "Запись о пользователе не найдена или не корректный запрос");
             log.info(responseObject.toString());
@@ -184,8 +160,6 @@ public class UserController {
             responseObject.put("message", "Имя поьзователя обновлено");
             responseObject.put("codeResponse", 302);
             responseObject.put("user", user);
-            responseObject.put("experience", experience);
-            responseObject.put("testResult", testResult);
             System.out.println(responseObject);
             return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
         }
@@ -310,97 +284,8 @@ public class UserController {
 
         } else {
             userService.delete(user.getId());
-            experienceService.delete(user.getId());
             responseObject.put("codeResponse", 202);
             responseObject.put("message", "Пользователь удален");
-        }
-        return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
-
-    }
-
-
-    /**
-     * Обновление записи пользователя
-     *
-     * @param id
-     * @return
-     */
-    @PostMapping(value = "/user-update")
-    public ResponseEntity<?> userUpdate(@RequestParam(value = "id", defaultValue = "-1") Long id,
-                                        @RequestParam(value = "experienceStartLocation", defaultValue = "-1") double experienceStartLocation,
-                                        @RequestParam(value = "experienceMindfulness", defaultValue = "-1") double experienceMindfulness,
-                                        @RequestParam(value = "experienceAttitudes", defaultValue = "-1") double experienceAttitudes,
-                                        @RequestParam(value = "experienceSelfRegulation", defaultValue = "-1") double experienceSelfRegulation,
-                                        @RequestParam(value = "experienceEmpathy", defaultValue = "-1") double experienceEmpathy,
-                                        @RequestParam(value = "testResultStartLocation", defaultValue = "-1") double testResultStartLocation,
-                                        @RequestParam(value = "testResultMindfulness", defaultValue = "-1") double testResultMindfulness,
-                                        @RequestParam(value = "testResultAttitudes", defaultValue = "-1") double testResultAttitudes,
-                                        @RequestParam(value = "testResultSelfRegulation", defaultValue = "-1") double testResultSelfRegulation,
-                                        @RequestParam(value = "testResultEmpathy", defaultValue = "-1") double testResultEmpathy) {
-
-        JSONObject responseObject = new JSONObject();
-        Experience experience = experienceService.findByUserId(id);
-        TestResult testResult = testresultService.findByUserId(id);
-        User user = userService.findById(id);
-
-        if (experience == null || user == null || testResult == null) {
-            responseObject.put("codeResponse", 404);
-            responseObject.put("message", "Запись о пользователе не найдена");
-            log.info(responseObject.toString());
-            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
-
-        } else
-
-            user.setEmail(userService.findById(id).getEmail());
-        user.setName(userService.findById(id).getName());
-        {
-
-            if (experienceStartLocation > experience.getStartLocation()) {
-                experience.setStartLocation(experienceStartLocation);
-            }
-            if (experienceMindfulness > experience.getMindfulness()) {
-                experience.setMindfulness(experienceMindfulness);
-            }
-            if (experienceAttitudes > experience.getAttitudes()) {
-                experience.setAttitudes(experienceAttitudes);
-            }
-            if (experienceSelfRegulation > experience.getSelfRegulation()) {
-                experience.setSelfRegulation(experienceSelfRegulation);
-            }
-            if (experienceEmpathy > experience.getEmpathy()) {
-                experience.setEmpathy(experienceEmpathy);
-            }
-
-
-            if (testResultStartLocation > experience.getStartLocation()) {
-                testResult.setStartLocation(testResultStartLocation);
-            }
-            if (testResultMindfulness > testResult.getMindfulness()) {
-                testResult.setMindfulness(testResultMindfulness);
-            }
-            if (testResultAttitudes > testResult.getAttitudes()) {
-                testResult.setAttitudes(testResultAttitudes);
-            }
-            if (testResultSelfRegulation > testResult.getSelfRegulation()) {
-                testResult.setSelfRegulation(testResultSelfRegulation);
-            }
-            if (testResultEmpathy > testResult.getEmpathy()) {
-                testResult.setEmpathy(testResultEmpathy);
-            }
-            String newToken = jwtTokenProvider.createToken(userService.findById(id).getEmail(), user.getRoles());
-            experienceService.update(experience);
-            log.info(experience.toString());
-            testresultService.update(testResult);
-            log.info(testResult.toString());
-            log.info(user.toString());
-            responseObject.put("id", id);
-            responseObject.put("token", newToken);
-            responseObject.put("message", "данные пользователя обновлены");
-            responseObject.put("codeResponse", 302);
-            responseObject.put("user", user);
-            responseObject.put("experience", experience);
-            responseObject.put("testResult", testResult);
-            log.info(responseObject.toString());
         }
         return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
 
@@ -440,14 +325,6 @@ public class UserController {
                 userService.create(user);
                 log.info(responseObject.toString());
 
-                Experience tempExperience = new Experience(user.getId());
-                experienceService.create(tempExperience);
-                log.info("опыт для " + user.getName() + " создан");
-
-                TestResult testresult = new TestResult(user.getId());
-                testresultService.create(testresult);
-                log.info("результат теста для" + user.getName() + " создан");
-
                 String token = jwtTokenProvider.createToken(email, user.getRoles());
 
                 responseObject.put("id", user.getId());
@@ -455,8 +332,6 @@ public class UserController {
                 responseObject.put("message", "пользователь с email " + email + " создан");
                 responseObject.put("codeResponse", 201);
                 responseObject.put("user", user);
-                responseObject.put("experience", experienceService.findByUserId(user.getId()));
-                responseObject.put("testResult", testresultService.findByUserId(user.getId()));
                 System.out.println(username + " create");
             }
         }

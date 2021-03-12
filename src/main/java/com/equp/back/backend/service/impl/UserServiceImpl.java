@@ -1,7 +1,5 @@
 package com.equp.back.backend.service.impl;
 
-//import com.equp.back.backend.exception.UserNotFound;
-import com.equp.back.backend.model.Experience;
 import com.equp.back.backend.model.Role;
 import com.equp.back.backend.model.Status;
 import com.equp.back.backend.model.User;

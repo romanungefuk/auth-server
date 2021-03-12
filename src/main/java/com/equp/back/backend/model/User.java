@@ -44,7 +44,6 @@ public class User extends BaseEntity {
         this.name = name;
         this.email = email;
         this.password = password;
-        new Experience(super.getId());
     }
 
     public User(Long id, String name, String email, String password) {
