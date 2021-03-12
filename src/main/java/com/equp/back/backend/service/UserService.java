@@ -15,6 +15,8 @@ public interface UserService {
 
     boolean updateName(User user, String newName);
 
+    boolean updateSubscription(User user,String subscriptionValue);
+
     boolean delete(Long id);
 
     User findByEmail(String email);

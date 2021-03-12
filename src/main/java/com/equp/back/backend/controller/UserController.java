@@ -365,4 +365,35 @@ public class UserController {
         }
     }
 
+    /**
+     * Обновление подписки пользователя в приложении
+     *
+     * @param id      идентификатор пользователя
+     * @param subscription код подписки
+     * @return возвращает пользователя с обновленным полем подписки
+     */
+    @PostMapping(value = "/subscription")
+    public ResponseEntity<?> userCreateSubscription(@RequestParam(value = "id", defaultValue = "-1") Long id,
+                                                    @RequestParam(value = "subscriptionValue", defaultValue = "-1") String subscriptionValue) {
+        JSONObject responseObject = new JSONObject();
+        User user = userService.findById(id);
+        if (user == null) {
+            responseObject.put("codeResponse", 404);
+            responseObject.put("message", "Запись о пользователе не найдена или не корректный запрос");
+            log.info(responseObject.toString());
+            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.NOT_FOUND);
+
+        } else {
+            String newToken = jwtTokenProvider.createToken(userService.findById(id).getEmail(), user.getRoles());
+            userService.updateSubscription(user, subscriptionValue);
+            responseObject.put("id", id);
+            responseObject.put("token", newToken);
+            responseObject.put("message", "Поле подписки обновлено");
+            responseObject.put("codeResponse", 302);
+            responseObject.put("user", user);
+            System.out.println(responseObject);
+            return new ResponseEntity<>(responseObject.toMap(), HttpStatus.ACCEPTED);
+        }
+    }
+
 }

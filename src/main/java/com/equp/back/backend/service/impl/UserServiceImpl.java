@@ -98,4 +98,14 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByName(name);
     }
 
+    @Override
+    public boolean updateSubscription(User user,String subscriptionValue) {
+        if (userRepository.existsById(user.getId())) {
+            user.setSubscription(subscriptionValue);
+            userRepository.save(user);
+            return true;
+        }
+        return false;
+    }
+
 }
