@@ -29,6 +29,9 @@ public class User extends BaseEntity {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "subscription")
+    private String subscription;
+
     @JsonIgnore
     @Column(name = "password")
     private String password;
@@ -79,6 +82,14 @@ public class User extends BaseEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSubscription() {
+        return subscription;
+    }
+
+    public void setSubscription(String subscription) {
+        this.subscription = subscription;
     }
 
     public String getPassword() {
