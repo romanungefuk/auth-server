@@ -92,22 +92,16 @@ public class AuthenticationRestController {
      */
     @GetMapping("/api/v1/auth/check")
     public String check() {
-        log.info("I am here1");
         String result="";
         User user = userService.findByEmail("user@mail.ru");
-        log.info("I am here2");
         boolean isPasswordCorrect = new BCryptPasswordEncoder().matches("12345", user.getPassword());
-        log.info("I am here3");
         if (user != null && isPasswordCorrect) {
-            log.info("I am here4");
             log.info("It is ok. The backend is running.");
             result = "ok";
         } else {
-            log.info("I am here5");
             log.info("It is not ok. The backend is not running.");
             result = "not_ok";
         }
-        log.info("I am here6");
         log.info(result);
         return result;
     }
