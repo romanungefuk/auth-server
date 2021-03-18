@@ -24,6 +24,7 @@ private final JwtTokenProvider jwtTokenProvider;
     private static final String PASSWORDCHANGE_ENDPOINT = "/password_change**";
     private static final String USER_ENDPOINT = "/api/v1/user**";
     private static final String MOOD_ENDPOINT = "/api/v1/mood**";
+    private static final String CHECK_ENDPOINT = "/api/v1/auth/check";
 
     @Autowired
     public SecurityConfig(JwtTokenProvider jwtTokenProvider) {
@@ -51,6 +52,7 @@ private final JwtTokenProvider jwtTokenProvider;
                 .antMatchers(SIGNUP_ENDPOINT).permitAll()
                 .antMatchers(UPDATEBYEMAIL_ENDPOINT).permitAll()
                 .antMatchers(PASSWORDCHANGE_ENDPOINT).permitAll()
+                .antMatchers(CHECK_ENDPOINT).permitAll()
                 //.antMatchers(ADMIN_ENDPOINT).hasRole("ADMIN")
                 .antMatchers(USER_ENDPOINT).hasRole("USER")
                 .antMatchers(MOOD_ENDPOINT).hasRole("USER")
