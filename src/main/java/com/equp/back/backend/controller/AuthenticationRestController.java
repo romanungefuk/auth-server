@@ -100,7 +100,7 @@ public class AuthenticationRestController {
             result = "ok";
         } else {
             log.info("It is not ok. The backend is not running.");
-            result = "not_ok";
+            result = "NOT_OK";
         }
         log.info(result);
         return result;
