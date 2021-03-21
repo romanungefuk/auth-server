@@ -159,7 +159,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
 
     // 500
 
-    @ExceptionHandler({  JwtAuthenticationException.class, JwtException.class})
+    @ExceptionHandler({  JwtException.class , IllegalArgumentException.class})
     public ResponseEntity<Object> handleAll(final Exception ex, final WebRequest request) {
         logger.info(ex.getClass().getName());
         logger.error("error", ex);
