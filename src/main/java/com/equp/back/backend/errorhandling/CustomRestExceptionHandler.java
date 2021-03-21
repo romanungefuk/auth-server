@@ -6,6 +6,7 @@ import java.util.List;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 
+import com.equp.back.backend.security.jwt.JwtAuthenticationException;
 import org.springframework.beans.TypeMismatchException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -157,7 +158,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
 
     // 500
 
-    @ExceptionHandler({ Exception.class })
+    @ExceptionHandler({ Exception.class, JwtAuthenticationException.class })
     public ResponseEntity<Object> handleAll(final Exception ex, final WebRequest request) {
         logger.info(ex.getClass().getName());
         logger.error("error", ex);
