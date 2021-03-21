@@ -169,13 +169,13 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
 
-    @ExceptionHandler(value
-            = { JwtAuthenticationException.class })
-    protected ResponseEntity<Object> handleConflict(
-            RuntimeException ex, WebRequest request) {
-        String bodyOfResponse = "This should be application specific";
-        return handleExceptionInternal(ex, bodyOfResponse,
-                new HttpHeaders(), HttpStatus.CONFLICT, request);
-    }
+//    @ExceptionHandler(value
+//            = { JwtAuthenticationException.class })
+//    protected ResponseEntity<Object> handleConflict(
+//            RuntimeException ex, WebRequest request) {
+//        String bodyOfResponse = "This should be application specific";
+//        return handleExceptionInternal(ex, bodyOfResponse,
+//                new HttpHeaders(), HttpStatus.CONFLICT, request);
+//    }
 
 }
