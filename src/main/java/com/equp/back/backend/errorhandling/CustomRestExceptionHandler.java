@@ -1,5 +1,6 @@
 package com.equp.back.backend.errorhandling;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +27,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import org.springframework.web.multipart.support.MissingServletRequestPartException;
 import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import javax.servlet.http.HttpServletResponse;
 
 @ControllerAdvice
 public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
@@ -158,24 +160,9 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
 //    }
 
     // 500
-
-    @ExceptionHandler({  JwtException.class , IllegalArgumentException.class})
-    public ResponseEntity<Object> handleAll(final Exception ex, final WebRequest request) {
-        logger.info(ex.getClass().getName());
-        logger.error("error", ex);
-        //
-        final ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, ex.getLocalizedMessage(), "error occurred");
-        return new ResponseEntity<Object>(apiError, new HttpHeaders(), apiError.getStatus());
+    @ExceptionHandler(JwtAuthenticationException.class)
+    public void springHandleNotFound(HttpServletResponse response) throws IOException {
+        response.sendError(HttpStatus.NOT_FOUND.value());
     }
-
-
-//    @ExceptionHandler(value
-//            = { JwtAuthenticationException.class })
-//    protected ResponseEntity<Object> handleConflict(
-//            RuntimeException ex, WebRequest request) {
-//        String bodyOfResponse = "This should be application specific";
-//        return handleExceptionInternal(ex, bodyOfResponse,
-//                new HttpHeaders(), HttpStatus.CONFLICT, request);
-//    }
 
 }
