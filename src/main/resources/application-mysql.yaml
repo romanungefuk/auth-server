@@ -16,6 +16,8 @@ spring:
     #initialization-mode: ALWAYS
     #schema: classpath*:database/initDB.sql
     #data: classpath*:database/populateDB.sql
+    hikari:
+      max-lifetime: 120000
 
   thymeleaf:
     cache: false
