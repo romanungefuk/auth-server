@@ -221,17 +221,17 @@ public class UserController {
 
                     "</style>"+
 
-                    "<title>Смена пароля от приложения EQup</title>" +
+                    "<title>Смена пароля от приложения \"Экви\"</title>" +
                     "</head>" +
                     "<body>" +
-                    "<h2>Восстановление пароля для EQup</h2>"+
+                    "<h2>Восстановление пароля для \"Экви\"</h2>"+
                     "<h2> </h2>"+
 
                     "<h4>Здравствуйте, " + user.getFirstName() + "!</h4> \n" +
                     "</br>\n"+
                     "<h4>Вы получили это письмо потому, что Вы (либо кто-то, выдающий себя за Вас) " +
                     "</br>\n"+
-                    "при попытке входа в учетную запись EQup отправил запрос на изменение пароля. " +
+                    "при попытке входа в учетную запись \"Экви\" отправил запрос на изменение пароля. " +
                     "</h4>" +
                     "</br>\n"+
                     "<h4>Если Вы этого не делали, то не обращайте внимания на это письмо. " +
@@ -247,7 +247,7 @@ public class UserController {
                     "</br>" +
                     "<h4>-------------------------</h4>" +
                     "</br>" +
-                    "<h4>Ваша команда EQup</h4>" +
+                    "<h4>Ваша команда \"Экви\"</h4>" +
                     "</body>" +
                     "</html>";
             message.setContent(htmlMsg, "text/html; charset=utf-8");
@@ -256,7 +256,7 @@ public class UserController {
             helper.setText(htmlMsg);
             helper.setFrom("no-reply@eq-up.ru");
             helper.setTo(user.getEmail());
-            helper.setSubject("Изменение пароля от EQup");
+            helper.setSubject("Изменение пароля от \"Экви\"");
             this.emailSender.send(message);
 
 

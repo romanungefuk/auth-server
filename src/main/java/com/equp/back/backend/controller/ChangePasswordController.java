@@ -86,7 +86,9 @@ public class ChangePasswordController {
                     "<title>Title</title>"+
                     "</head>"+
                     "<body>"+
-                    "<p>Пароль был изменен</p>"+
+                    "<p>Пароль в приложении успешно изменён.\n" +
+                    "\n" +
+                    "Ваша команда \"Экви\"</p>"+
                     "</body>"+
                     "</html>";
 
