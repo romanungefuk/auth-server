@@ -186,7 +186,7 @@ public class UserController {
         } else {
 
             responseObject.put("codeResponse", 202);
-            responseObject.put("message", "На email: " + email + " отправлена информация о изменении пароля");
+            responseObject.put("message", "На Email: " + email + " отправлена информация об изменении пароля");
 
 
             MimeMessage message = emailSender.createMimeMessage();
