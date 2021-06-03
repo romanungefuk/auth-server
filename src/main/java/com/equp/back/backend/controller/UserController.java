@@ -102,8 +102,8 @@ public class UserController {
      */
 
     @PostMapping(value = "/update-by-app")
-    public ResponseEntity<?> userUpdate(@RequestParam(value = "id", defaultValue = "-1") Long id,
-                                        @RequestParam(value = "newPassword", defaultValue = "-1") String newPassword) {
+    public ResponseEntity<?> userUpdate(@RequestParam(value = "id") Long id,
+                                        @RequestParam(value = "newPassword") String newPassword) {
 
         JSONObject responseObject = new JSONObject();
         User user = userService.findById(id);
@@ -142,8 +142,8 @@ public class UserController {
      * @return возвращает пользователя, его опыт и его результаты тестов
      */
     @PostMapping(value = "/update-by-app-name")
-    public ResponseEntity<?> userNameUpdate(@RequestParam(value = "id", defaultValue = "-1") Long id,
-                                            @RequestParam(value = "newName", defaultValue = "-1") String newName) {
+    public ResponseEntity<?> userNameUpdate(@RequestParam(value = "id") Long id,
+                                            @RequestParam(value = "newName") String newName) {
         JSONObject responseObject = new JSONObject();
         User user = userService.findById(id);
         if (user == null) {
